@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/MenuInicial.gd" type="Script" id=1]
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -26,38 +27,58 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container/Inicio"]
-margin_left = 512.0
-margin_top = 317.0
-margin_right = 768.0
-margin_bottom = 403.0
+margin_left = 224.0
+margin_top = 180.0
+margin_right = 1056.0
+margin_bottom = 539.0
 
 [node name="Titulo" type="Label" parent="Container/Inicio/VBoxContainer"]
-margin_right = 256.0
-margin_bottom = 14.0
+margin_right = 832.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "SUPER GOTINHA VS A DESINFORMAÇÃO"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blank" type="Label" parent="Container/Inicio/VBoxContainer"]
+margin_top = 69.0
+margin_right = 832.0
+margin_bottom = 134.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-modulate = Color( 0.188235, 1, 0, 1 )
-margin_top = 18.0
-margin_right = 256.0
-margin_bottom = 38.0
+margin_top = 138.0
+margin_right = 832.0
+margin_bottom = 209.0
+custom_fonts/font = ExtResource( 2 )
 text = "INICIAR"
 
 [node name="HowToPlayButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-modulate = Color( 1, 0.968627, 0, 1 )
-margin_top = 42.0
-margin_right = 256.0
-margin_bottom = 62.0
+margin_top = 213.0
+margin_right = 832.0
+margin_bottom = 284.0
+custom_fonts/font = ExtResource( 2 )
 text = "COMO JOGAR"
 
 [node name="QuitButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-modulate = Color( 1, 0, 0, 1 )
-margin_top = 66.0
-margin_right = 256.0
-margin_bottom = 86.0
+margin_top = 288.0
+margin_right = 832.0
+margin_bottom = 359.0
+custom_fonts/font = ExtResource( 2 )
 text = "FECHAR O JOGO"
 
 [node name="Instrucoes" type="CenterContainer" parent="Container"]
@@ -69,37 +90,51 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container/Instrucoes"]
-margin_left = 361.0
-margin_top = 341.0
-margin_right = 919.0
-margin_bottom = 379.0
+margin_left = 276.0
+margin_top = 221.0
+margin_right = 1004.0
+margin_bottom = 498.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Container/Instrucoes/VBoxContainer"]
-margin_right = 558.0
-margin_bottom = 14.0
-text = "Pressione as Teclas Direcionais ESQUERDA ou DIREIRA para movimentar o Personagem"
+margin_right = 728.0
+margin_bottom = 133.0
+custom_fonts/font = ExtResource( 2 )
+text = "Pressione as Teclas WASD
+para movimentar o Personagem"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Blank" type="Label" parent="Container/Instrucoes/VBoxContainer"]
+margin_top = 137.0
+margin_right = 728.0
+margin_bottom = 202.0
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+uppercase = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Container/Instrucoes/VBoxContainer"]
-margin_top = 18.0
-margin_right = 558.0
-margin_bottom = 38.0
+margin_top = 206.0
+margin_right = 728.0
+margin_bottom = 277.0
 alignment = 1
 
 [node name="StartButton" type="Button" parent="Container/Instrucoes/VBoxContainer/HBoxContainer"]
-modulate = Color( 0.188235, 1, 0, 1 )
-margin_left = 215.0
-margin_right = 277.0
-margin_bottom = 20.0
+margin_left = 181.0
+margin_right = 375.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 2 )
 text = "INICIAR"
 
 [node name="BackButton" type="Button" parent="Container/Instrucoes/VBoxContainer/HBoxContainer"]
-modulate = Color( 1, 0.968627, 0, 1 )
-margin_left = 281.0
-margin_right = 343.0
-margin_bottom = 20.0
+margin_left = 379.0
+margin_right = 547.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 2 )
 text = "VOLTAR"
 [connection signal="pressed" from="Container/Inicio/VBoxContainer/StartButton" to="Container" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Container/Inicio/VBoxContainer/HowToPlayButton" to="Container" method="_on_HowToPlayButton_pressed"]
