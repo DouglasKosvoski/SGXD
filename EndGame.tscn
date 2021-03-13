@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://RetryButton.gd" type="Script" id=1]
+[ext_resource path="res://QuitButton.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" type="Button" parent="."]
+modulate = Color( 0.235294, 1, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -20.0
+margin_right = -15.0
+text = "RETRY"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+world_scene = "res://World.tscn"
+
+[node name="QuitButton" type="Button" parent="."]
+modulate = Color( 1, 0.270588, 0.270588, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 32.0
+margin_top = -20.0
+margin_right = 77.0
+text = "QUIT"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
