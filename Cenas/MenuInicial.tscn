@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/MenuInicial.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Container" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+primeira_fase = "res://Cenas/Fases/Fase01.tscn"
+
+[node name="Inicio" type="CenterContainer" parent="Container"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Inicio"]
+margin_left = 512.0
+margin_top = 317.0
+margin_right = 768.0
+margin_bottom = 403.0
+
+[node name="Titulo" type="Label" parent="Container/Inicio/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 14.0
+text = "SUPER GOTINHA VS A DESINFORMAÇÃO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="Container/Inicio/VBoxContainer"]
+modulate = Color( 0.188235, 1, 0, 1 )
+margin_top = 18.0
+margin_right = 256.0
+margin_bottom = 38.0
+text = "INICIAR"
+
+[node name="HowToPlayButton" type="Button" parent="Container/Inicio/VBoxContainer"]
+modulate = Color( 1, 0.968627, 0, 1 )
+margin_top = 42.0
+margin_right = 256.0
+margin_bottom = 62.0
+text = "COMO JOGAR"
+
+[node name="QuitButton" type="Button" parent="Container/Inicio/VBoxContainer"]
+modulate = Color( 1, 0, 0, 1 )
+margin_top = 66.0
+margin_right = 256.0
+margin_bottom = 86.0
+text = "FECHAR O JOGO"
+
+[node name="Instrucoes" type="CenterContainer" parent="Container"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Instrucoes"]
+margin_left = 361.0
+margin_top = 341.0
+margin_right = 919.0
+margin_bottom = 379.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Instrucoes/VBoxContainer"]
+margin_right = 558.0
+margin_bottom = 14.0
+text = "Pressione as Teclas Direcionais ESQUERDA ou DIREIRA para movimentar o Personagem"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Instrucoes/VBoxContainer"]
+margin_top = 18.0
+margin_right = 558.0
+margin_bottom = 38.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Container/Instrucoes/VBoxContainer/HBoxContainer"]
+modulate = Color( 0.188235, 1, 0, 1 )
+margin_left = 215.0
+margin_right = 277.0
+margin_bottom = 20.0
+text = "INICIAR"
+
+[node name="BackButton" type="Button" parent="Container/Instrucoes/VBoxContainer/HBoxContainer"]
+modulate = Color( 1, 0.968627, 0, 1 )
+margin_left = 281.0
+margin_right = 343.0
+margin_bottom = 20.0
+text = "VOLTAR"
+[connection signal="pressed" from="Container/Inicio/VBoxContainer/StartButton" to="Container" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Container/Inicio/VBoxContainer/HowToPlayButton" to="Container" method="_on_HowToPlayButton_pressed"]
+[connection signal="pressed" from="Container/Inicio/VBoxContainer/QuitButton" to="Container" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Container/Instrucoes/VBoxContainer/HBoxContainer/StartButton" to="Container" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Container/Instrucoes/VBoxContainer/HBoxContainer/BackButton" to="Container" method="_on_BackButton_pressed"]
