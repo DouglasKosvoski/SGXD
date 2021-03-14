@@ -24,18 +24,17 @@ __meta__ = {
 
 [node name="Background" type="ColorRect" parent="CanvasLayer/Container"]
 visible = false
-margin_right = 1280.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.8 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="PauseButton" type="Button" parent="CanvasLayer/Container"]
 anchor_left = 0.029
 anchor_top = 0.029
-anchor_right = 0.029
+anchor_right = 0.058
 anchor_bottom = 0.029
 margin_right = 142.0
 margin_bottom = 71.0
