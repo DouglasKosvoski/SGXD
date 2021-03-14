@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
+export(int) var MAX_SPEED
+export(int) var ACCELERATION
+export(int) var JUMP_FORCE
+export(float) var FRICTION
+export(int) var GRAVITY_FORCE
+
 const UP = Vector2(0, -1)
-const ACCELERATION = 50
-const FRICTION = 0.2
-const MAX_SPEED = 400
-const JUMP_FORCE = -800
-const GRAVITY_FORCE = 50
 var motion = Vector2()
 
 func _physics_process(delta):

@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 48, 24 )
+extents = Vector2( 122.371, 24 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -16,6 +16,10 @@ animations = [ {
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
+MAX_SPEED = 400
+ACCELERATION = 50
+JUMP_FORCE = -800
+GRAVITY_FORCE = 50
 
 [node name="Foot" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 96 )
