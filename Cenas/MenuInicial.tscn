@@ -17,7 +17,12 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-primeira_fase = "res://Cenas/Fases/Fase01.tscn"
+primeira_fase = "res://Cenas/Intro.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="Container"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="Inicio" type="CenterContainer" parent="Container"]
 anchor_right = 1.0

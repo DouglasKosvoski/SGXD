@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Intro.gd" type="Script" id=1]
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene = "res://Cenas/Fases/Fase01.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+margin_left = 159.0
+margin_top = 222.0
+margin_right = 1121.0
+margin_bottom = 498.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+margin_right = 962.0
+margin_bottom = 201.0
+custom_fonts/font = ExtResource( 2 )
+text = "O desafio é garantir sua imunização, 
+preencher sua carteira de vacinação
+ e eliminar a desinformação"
+align = 1
+valign = 1
+
+[node name="Start" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+margin_top = 205.0
+margin_right = 962.0
+margin_bottom = 276.0
+custom_fonts/font = ExtResource( 2 )
+text = "Continuar"
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]

@@ -12,8 +12,6 @@ const joystick_trigger = 0.5
 var motion = Vector2()
 
 func _physics_process(delta):
-	var friction = false
-	
 	# Horizontal
 	if Input.is_action_pressed("ui_right") or joystick.get_value().x > joystick_trigger:
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)

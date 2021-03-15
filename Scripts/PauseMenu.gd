@@ -1,5 +1,12 @@
 extends Container
 
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		if get_tree().paused == false:
+			_on_PauseButton_pressed()
+		else:
+			_on_ResumeButton_pressed()
+
 func _on_PauseButton_pressed():
 	$Content.visible = true
 	$Background.visible = true
