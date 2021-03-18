@@ -10,7 +10,7 @@ export(int) var lvl_qtd_vacinas
 
 onready var joystick = $CanvasLayer/Container/Joystick/Joystick_button
 const UP = Vector2(0,-1)
-const joystick_trigger = 0.5
+const joystick_trigger = 0.2
 var motion = Vector2()
 var vacine_counter = 0
 
@@ -37,9 +37,9 @@ func _physics_process(delta):
 	motion = move_and_slide(motion)
 
 func flip_animation():
-	if joystick.get_value().x > 0:
+	if Input.is_action_just_pressed("ui_right") or joystick.get_value().x > 0:
 		$AnimatedSprite.flip_h = false
-	elif joystick.get_value().x < 0:
+	elif Input.is_action_just_pressed("ui_left") or joystick.get_value().x < 0:
 		$AnimatedSprite.flip_h = true
 
 func gravity(motion, g):
@@ -61,6 +61,7 @@ func collected(vacine_name):
 		level_win()
 
 func level_win():
+	get_tree().paused = true
 	$CanvasLayer/Container.visible = false
 	$CanvasLayer/Vacinas.visible = false
 	get_parent().get_node("PauseMenu/CanvasLayer/Container").visible = false
