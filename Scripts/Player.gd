@@ -5,11 +5,14 @@ export(int) var ACCELERATION
 export(int) var JUMP_FORCE
 export(float) var FRICTION
 export(int) var GRAVITY_FORCE
+export(String, FILE, "*.tres") var vacine_font
+export(int) var lvl_qtd_vacinas
 
 onready var joystick = $CanvasLayer/Container/Joystick/Joystick_button
 const UP = Vector2(0,-1)
 const joystick_trigger = 0.5
 var motion = Vector2()
+var vacine_counter = 0
 
 func _physics_process(delta):
 	# Horizontal
@@ -42,3 +45,23 @@ func flip_animation():
 func gravity(motion, g):
 	motion.y += g
 	return motion
+
+func collected(vacine_name):
+	var vbox = $CanvasLayer/Vacinas/VBoxContainer
+	var label = Label.new()
+	label.text = vacine_name
+	label.name = vacine_name
+	label.add_font_override("font", load(vacine_font))
+	label.get("custom_fonts/font").set_size(36)
+	vbox.add_child(label)
+	vacine_counter += 1
+	$CanvasLayer/Vacinas/Label.text = "Vacinas Coletadas: %s/%s" % [vacine_counter, lvl_qtd_vacinas]
+
+	if vacine_counter == lvl_qtd_vacinas:
+		level_win()
+
+func level_win():
+	$CanvasLayer/Container.visible = false
+	$CanvasLayer/Vacinas.visible = false
+	get_parent().get_node("PauseMenu/CanvasLayer/Container").visible = false
+	get_parent().get_node("LevelComplete/CanvasLayer/Container").visible = true

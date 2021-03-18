@@ -32,14 +32,14 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container/Inicio"]
-margin_left = 224.0
-margin_top = 180.0
-margin_right = 1056.0
-margin_bottom = 539.0
+margin_left = 416.0
+margin_top = 250.0
+margin_right = 864.0
+margin_bottom = 469.0
 
 [node name="Titulo" type="Label" parent="Container/Inicio/VBoxContainer"]
-margin_right = 832.0
-margin_bottom = 65.0
+margin_right = 448.0
+margin_bottom = 37.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -52,9 +52,9 @@ __meta__ = {
 }
 
 [node name="Blank" type="Label" parent="Container/Inicio/VBoxContainer"]
-margin_top = 69.0
-margin_right = 832.0
-margin_bottom = 134.0
+margin_top = 41.0
+margin_right = 448.0
+margin_bottom = 78.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -66,23 +66,23 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-margin_top = 138.0
-margin_right = 832.0
-margin_bottom = 209.0
+margin_top = 82.0
+margin_right = 448.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 2 )
 text = "INICIAR"
 
 [node name="HowToPlayButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-margin_top = 213.0
-margin_right = 832.0
-margin_bottom = 284.0
+margin_top = 129.0
+margin_right = 448.0
+margin_bottom = 172.0
 custom_fonts/font = ExtResource( 2 )
 text = "COMO JOGAR"
 
 [node name="QuitButton" type="Button" parent="Container/Inicio/VBoxContainer"]
-margin_top = 288.0
-margin_right = 832.0
-margin_bottom = 359.0
+margin_top = 176.0
+margin_right = 448.0
+margin_bottom = 219.0
 custom_fonts/font = ExtResource( 2 )
 text = "FECHAR O JOGO"
 
@@ -95,10 +95,10 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container/Instrucoes"]
-margin_left = 276.0
-margin_top = 221.0
-margin_right = 1004.0
-margin_bottom = 498.0
+margin_left = 444.0
+margin_top = 277.0
+margin_right = 836.0
+margin_bottom = 442.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

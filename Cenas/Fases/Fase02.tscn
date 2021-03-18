@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Cenas/LevelComplete.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Camera2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Samples/street.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Boundaries.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Cenas/Vacina.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Background"]
+modulate = Color( 0.0588235, 1, 0.556863, 1 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="Background"]
+modulate = Color( 0.0588235, 1, 0.556863, 1 )
+position = Vector2( 1280, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 744, 416 )
+MAX_SPEED = 450
+FRICTION = 0.2
+vacine_font = "res://Addons/game_font.tres"
+lvl_qtd_vacinas = 7
+
+[node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
+editor_draw_limits = true
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="Left" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( -24, 368 )
+scale = Vector2( 1, 14.96 )
+
+[node name="Right" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 2592, 360 )
+scale = Vector2( 1, 14.96 )
+
+[node name="Bottom" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 1288, 728 )
+scale = Vector2( 55, 1 )
+
+[node name="Top" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 1288, -24 )
+scale = Vector2( 55, 1 )
+
+[node name="Vacinas" type="Node2D" parent="."]
+
+[node name="Vacina" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 1208, 440 )
+vacine_name = "TESTE"
+
+[node name="PauseMenu" parent="." instance=ExtResource( 2 )]
+margin_left = 600.0
+margin_top = 376.0
+margin_right = 600.0
+margin_bottom = 376.0
+
+[node name="LevelComplete" parent="." instance=ExtResource( 1 )]
+margin_left = 1240.0
+margin_top = 736.0
+margin_right = 1240.0
+margin_bottom = 736.0
