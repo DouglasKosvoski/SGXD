@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/MenuInicial.gd" type="Script" id=1]
-[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -13,11 +13,11 @@ __meta__ = {
 [node name="Container" type="Container" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-primeira_fase = "res://Cenas/Intro.tscn"
+primeira_fase = "res://Scenes/Intro.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="Container"]
 anchor_right = 1.0
@@ -40,7 +40,7 @@ margin_bottom = 469.0
 [node name="Titulo" type="Label" parent="Container/Inicio/VBoxContainer"]
 margin_right = 448.0
 margin_bottom = 37.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -55,7 +55,7 @@ __meta__ = {
 margin_top = 41.0
 margin_right = 448.0
 margin_bottom = 78.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 0.709804, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -69,21 +69,21 @@ __meta__ = {
 margin_top = 82.0
 margin_right = 448.0
 margin_bottom = 125.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "INICIAR"
 
 [node name="HowToPlayButton" type="Button" parent="Container/Inicio/VBoxContainer"]
 margin_top = 129.0
 margin_right = 448.0
 margin_bottom = 172.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "COMO JOGAR"
 
 [node name="QuitButton" type="Button" parent="Container/Inicio/VBoxContainer"]
 margin_top = 176.0
 margin_right = 448.0
 margin_bottom = 219.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "FECHAR O JOGO"
 
 [node name="Instrucoes" type="CenterContainer" parent="Container"]
@@ -106,7 +106,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="Container/Instrucoes/VBoxContainer"]
 margin_right = 728.0
 margin_bottom = 133.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "Pressione as Teclas WASD
 para movimentar o Personagem"
 align = 1
@@ -117,7 +117,7 @@ uppercase = true
 margin_top = 137.0
 margin_right = 728.0
 margin_bottom = 202.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 align = 1
 valign = 1
 uppercase = true
@@ -132,14 +132,14 @@ alignment = 1
 margin_left = 181.0
 margin_right = 375.0
 margin_bottom = 71.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "INICIAR"
 
 [node name="BackButton" type="Button" parent="Container/Instrucoes/VBoxContainer/HBoxContainer"]
 margin_left = 379.0
 margin_right = 547.0
 margin_bottom = 71.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "VOLTAR"
 [connection signal="pressed" from="Container/Inicio/VBoxContainer/StartButton" to="Container" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Container/Inicio/VBoxContainer/HowToPlayButton" to="Container" method="_on_HowToPlayButton_pressed"]

@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/Samples/street.png" type="Texture" id=1]
-[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Cenas/Boundaries.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Cenas/Camera2D.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Cenas/Vacina.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Cenas/LevelComplete.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Boundaries.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=7]
+
 
 [node name="Node2D" type="Node2D"]
 
@@ -50,6 +51,7 @@ editor_draw_limits = true
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
 
 [node name="LevelComplete" parent="." instance=ExtResource( 7 )]
+next_level = "res://Scenes/Levels/Level02.tscn"
 
 [node name="Boundaries" type="Node2D" parent="."]
 

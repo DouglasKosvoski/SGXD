@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SGXD"
-run/main_scene="res://Cenas/GameOpening.tscn"
+run/main_scene="res://Scenes/GameOpening.tscn"
 config/icon="res://Sprites/icon.png"
 
 [display]
