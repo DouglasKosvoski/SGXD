@@ -1,21 +1,22 @@
-extends Container
+extends Control
 
-export(String, FILE, "*.tscn") var primeira_fase
+export(String, FILE, "*.tscn") var start
+export(String, FILE, "*.tscn") var howtoplay
+export(String, FILE, "*.tscn") var options
+export(String, FILE, "*.tscn") var credits
+export(String, FILE, "*.tscn") var ending
 
-func _on_StartButton_pressed():
-	# Inicia a Primeira Fase
-	get_tree().change_scene(primeira_fase)
+func _on_Start_pressed():
+	get_tree().change_scene(start);
 
-func _on_HowToPlayButton_pressed():
-	# Deixa as intrucoes de como jogar visivel
-	$Instrucoes.visible = true
-	$Inicio.visible = false
+func _on_HowToPlay_pressed():
+	get_tree().change_scene(howtoplay);
 
-func _on_BackButton_pressed():
-	# Deixa as intrucoes de como jogar invisivel
-	$Instrucoes.visible = false
-	$Inicio.visible = true
+func _on_Options_pressed():
+	get_tree().change_scene(options);
 
-func _on_QuitButton_pressed():
-	# Encerra a Aplicacao
-	get_tree().quit()
+func _on_Credits_pressed():
+	get_tree().change_scene(credits);
+
+func _on_Quit_pressed():
+	get_tree().change_scene(ending);

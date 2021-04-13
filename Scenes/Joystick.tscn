@@ -10,6 +10,7 @@ radius = 64.0
 
 [node name="Joystick" type="Sprite"]
 self_modulate = Color( 0, 0, 0, 0.470588 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 
 [node name="Joystick_button" type="TouchScreenButton" parent="."]

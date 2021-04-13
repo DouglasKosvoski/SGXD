@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Scripts/Intro.gd" type="Script" id=1]
-[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -14,42 +13,26 @@ next_scene = "res://Scenes/Levels/Level01.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
-margin_left = 381.0
-margin_top = 278.0
-margin_right = 899.0
-margin_bottom = 442.0
-
-[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-margin_right = 518.0
-margin_bottom = 117.0
-custom_fonts/font = ExtResource( 2 )
-text = "O desafio é garantir sua imunização, 
-preencher sua carteira de vacinação
- e eliminar a desinformação"
-align = 1
-valign = 1
-
-[node name="Start" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-margin_top = 121.0
-margin_right = 518.0
-margin_bottom = 164.0
-custom_fonts/font = ExtResource( 2 )
+[node name="Start" type="Button" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -36.5
+margin_top = -10.0
+margin_right = 36.5
+margin_bottom = 10.0
 text = "Continuar"
-[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_right = 240.0
+margin_bottom = 31.0
+text = "Colete todas as vacinas antes que o tempo se esgote"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]

@@ -2,13 +2,16 @@ extends KinematicBody2D
 
 export(int) var MAX_SPEED
 export(int) var ACCELERATION
-export(int) var JUMP_FORCE
 export(float) var FRICTION
-export(int) var GRAVITY_FORCE
 export(String, FILE, "*.tres") var vacine_font
 export(int) var lvl_qtd_vacinas
 
-onready var joystick = $CanvasLayer/Container/Joystick/Joystick_button
+export(int) var current_level
+export(String, FILE, "*.tscn") var level1
+export(String, FILE, "*.tscn") var level2
+export(String, FILE, "*.tscn") var level3
+
+onready var joystick = $CanvasLayer/Joystick/Joystick_button
 const UP = Vector2(0,-1)
 const joystick_trigger = 0.2
 var motion = Vector2()
@@ -61,8 +64,7 @@ func collected(vacine_name):
 		level_win()
 
 func level_win():
-	get_tree().paused = true
-	$CanvasLayer/Container.visible = false
-	$CanvasLayer/Vacinas.visible = false
-	get_parent().get_node("PauseMenu/CanvasLayer/Container").visible = false
-	get_parent().get_node("LevelComplete/CanvasLayer/Container").visible = true
+	if current_level == 1:
+		get_tree().change_scene(level2)
+	elif current_level == 2:
+		get_tree().change_scene(level3)
