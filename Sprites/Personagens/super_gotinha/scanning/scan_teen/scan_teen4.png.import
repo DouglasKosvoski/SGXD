@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/super_gotinha_alpha.png-400a283fabb86edcbbaccb9d44dcfe31.stex"
+path="res://.import/scan_teen4.png-dac8e9a696cc3360c3e7016d0437a817.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Samples/super_gotinha_alpha.png"
-dest_files=[ "res://.import/super_gotinha_alpha.png-400a283fabb86edcbbaccb9d44dcfe31.stex" ]
+source_file="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen4.png"
+dest_files=[ "res://.import/scan_teen4.png-dac8e9a696cc3360c3e7016d0437a817.stex" ]
 
 [params]
 
