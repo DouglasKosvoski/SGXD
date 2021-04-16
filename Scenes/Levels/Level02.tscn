@@ -23,15 +23,9 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 78.6611, 40 )
-MAX_SPEED = 70
-ACCELERATION = 20
-FRICTION = 0.15
 vacine_font = "res://Addons/game_font.tres"
 lvl_qtd_vacinas = 2
 current_level = 2
-level1 = "res://Scenes/Levels/Level01.tscn"
-level2 = "res://Scenes/Levels/Level02.tscn"
-level3 = "res://Scenes/Levels/Level03.tscn"
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
 limit_right = 240
