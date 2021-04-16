@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_teen.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Joystick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Magnifier.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_mature.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_kid.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_teen/running_adolescente2.png" type="Texture" id=8]
@@ -20,6 +21,16 @@
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_mature/running_adulto4.png" type="Texture" id=20]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_kid/running_crianca1.png" type="Texture" id=21]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_mature/running_adulto1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_mature/scan_mature3.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_mature/scan_mature0.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_mature/scan_mature1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen1.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_mature/scan_mature2.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_mature/scan_mature4.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen0.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen3.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Personagens/super_gotinha/scanning/scan_teen/scan_teen2.png" type="Texture" id=40]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11.9585 )
@@ -48,6 +59,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "magnifier",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=4]
@@ -60,6 +76,11 @@ animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "magnifier",
 "speed": 5.0
 } ]
 
@@ -77,14 +98,17 @@ animation = "idle"
 [node name="Teen" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 3 )
-animation = "run"
+animation = "magnifier"
 
 [node name="Adult" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 4 )
-animation = "run"
+animation = "magnifier"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Magnifier" parent="CanvasLayer" instance=ExtResource( 4 )]
+position = Vector2( 210.304, 103 )
 
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource( 3 )]
 position = Vector2( 32, 103 )

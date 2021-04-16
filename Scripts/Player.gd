@@ -26,6 +26,8 @@ var anim
 func _ready():
 	MAX_SPEED = MAX_SPEED + (MAX_SPEED * (GAIN * current_level))
 	ACCELERATION = MAX_SPEED / 10
+	if current_level == 1:
+		$CanvasLayer/Magnifier.visible = false
 	anim_setup()
 
 func _physics_process(delta):
@@ -95,3 +97,8 @@ func level_complete():
 		get_tree().change_scene("res://Scenes/Levels/Level03.tscn")
 	elif current_level == 3:
 		get_tree().change_scene("res://Scenes/Ending.tscn")
+
+func magnifier_glass():
+	if current_level != 1:
+		anim.play("magnifier")
+		print("APERTOU NO PLAYER")
