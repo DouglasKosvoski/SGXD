@@ -22,7 +22,6 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, 40 )
-vacine_font = "res://Addons/game_font.tres"
 lvl_qtd_vacinas = 3
 current_level = 1
 

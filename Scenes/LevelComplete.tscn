@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/LevelComplete.gd" type="Script" id=2]
 
 [node name="LevelComplete" type="Control"]
@@ -31,6 +32,7 @@ anchor_right = 0.5
 margin_left = -90.5
 margin_right = 90.5
 margin_bottom = 68.0
+custom_fonts/font = ExtResource( 1 )
 text = "Level Completo Parabens
 Seu tempo foi: xxxxxxxxxx
 voce coletou xx de yy vacinas no total"
@@ -50,6 +52,7 @@ margin_left = -36.5
 margin_top = -55.0
 margin_right = 36.5
 margin_bottom = -35.0
+custom_fonts/font = ExtResource( 1 )
 text = "Continuar"
 __meta__ = {
 "_edit_use_anchors_": false

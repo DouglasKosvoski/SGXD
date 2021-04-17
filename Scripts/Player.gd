@@ -80,7 +80,7 @@ func collected(vacine_name):
 	label.text = vacine_name
 	label.name = vacine_name
 	label.add_font_override("font", load(vacine_font))
-	label.get("custom_fonts/font").set_size(36)
+	#label.get("custom_fonts/font").set_size(36)
 	vbox.add_child(label)
 	vacine_counter += 1
 	$CanvasLayer/Vacinas/Label.text = "Vacinas Coletadas: %s/%s" % [vacine_counter, lvl_qtd_vacinas]
