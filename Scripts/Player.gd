@@ -22,13 +22,16 @@ var motion = Vector2()
 var vacine_counter = 0
 # responsible for handling animations
 var anim
+var priority = 1
 
 func _ready():
 	MAX_SPEED = MAX_SPEED + (MAX_SPEED * (GAIN * current_level))
 	ACCELERATION = MAX_SPEED / 10
 	if current_level == 1:
 		$CanvasLayer/Magnifier.visible = false
+		$CanvasLayer/Throw.visible = false
 	anim_setup()
+	
 
 func _physics_process(delta):
 	animation_control()
@@ -46,23 +49,46 @@ func anim_setup():
 
 # control which animation is currently playing and in what order or direction
 func animation_control():
-	if Input.is_action_pressed("ui_right") or joystick.get_value().x >= joystick_trigger:
-		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
-		anim.play("run")
-	elif Input.is_action_pressed("ui_left") or joystick.get_value().x <= -joystick_trigger:
-		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
-		anim.play("run")
+	if priority == 3:
+		motion = Vector2(0,0)
+		magnifier_glass()
+	
+	elif priority == 2:
+		motion = Vector2(0,0)
+		throw()
+	
 	else:
-		motion.x = lerp(motion.x, 0, FRICTION)
-		anim.play("idle")
-		
-	if Input.is_action_pressed("ui_up") or joystick.get_value().y <= -joystick_trigger:
-		motion.y = min(motion.y + ACCELERATION, -MAX_SPEED)
-		anim.play("run")
-	elif Input.is_action_pressed("ui_down") or joystick.get_value().y > joystick_trigger:
-		motion.y = max(motion.y - ACCELERATION, +MAX_SPEED)
-	else:
-		motion.y = lerp(motion.y, 0, FRICTION)
+		if Input.is_action_just_pressed("scan"):
+			if current_level != 1:
+				priority = 3
+			return
+		elif Input.is_action_just_pressed("throw"):
+			if current_level != 1:
+				priority = 2
+			return
+		elif Input.is_action_pressed("ui_right") or joystick.get_value().x >= joystick_trigger:
+			motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
+			anim.play("run")
+			priority = 1
+		elif Input.is_action_pressed("ui_left") or joystick.get_value().x <= -joystick_trigger:
+			motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
+			anim.play("run")
+			priority = 1
+		else:
+			motion.x = lerp(motion.x, 0, FRICTION)
+			anim.play("idle")
+			priority = 0
+			
+		if Input.is_action_pressed("ui_up") or joystick.get_value().y <= -joystick_trigger:
+			motion.y = min(motion.y + ACCELERATION, -MAX_SPEED)
+			anim.play("run")
+			priority = 1
+		elif Input.is_action_pressed("ui_down") or joystick.get_value().y > joystick_trigger:
+			motion.y = max(motion.y - ACCELERATION, +MAX_SPEED)
+			priority = 1
+		else:
+			motion.y = lerp(motion.y, 0, FRICTION)
+			priority = 0
 
 	flip_animation()
 
@@ -99,6 +125,14 @@ func level_complete():
 		get_tree().change_scene("res://Scenes/Ending.tscn")
 
 func magnifier_glass():
-	if current_level != 1:
-		anim.play("magnifier")
-		print("APERTOU NO PLAYER")
+	priority = 3
+	anim.play("magnifier")
+	if anim.animation == "magnifier" && anim.frame == anim.frames.get_frame_count("magnifier")-1:
+		priority = 0
+	
+func throw():
+	priority = 2
+	anim.play("throw")
+	if anim.animation == "throw" && anim.frame == anim.frames.get_frame_count("throw")-1:
+		priority = 0
+	

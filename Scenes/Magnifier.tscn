@@ -19,11 +19,4 @@ color = Color( 0, 0, 0, 0.705882 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 19, 2 )
-scale = Vector2( -1, 1 )
-texture = ExtResource( 1 )
-centered = false
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
