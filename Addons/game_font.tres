@@ -1,11 +1,10 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Addons/Funny & Cute.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Addons/pixel funny e cute.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 8
+size = 4
 outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
+outline_color = Color( 0.129412, 0.137255, 0.14902, 1 )
+extra_spacing_space = 2
 font_data = ExtResource( 1 )

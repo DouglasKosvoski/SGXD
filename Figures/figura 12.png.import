@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gotinhaadolescentepalidolupa.png-cb15f707861650bf1defa43ef4b9353f.stex"
+path="res://.import/figura 12.png-bd92babadedd2f5a25b7a65073286c91.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Figures/gotinhaadolescentepalidolupa.png"
-dest_files=[ "res://.import/gotinhaadolescentepalidolupa.png-cb15f707861650bf1defa43ef4b9353f.stex" ]
+source_file="res://Figures/figura 12.png"
+dest_files=[ "res://.import/figura 12.png-bd92babadedd2f5a25b7a65073286c91.stex" ]
 
 [params]
 

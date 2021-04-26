@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Super Gotinha.jpeg-cccffa4cd9ea28638d177810a6902579.stex"
+path="res://.import/figura 17.png-7e68ab8fb6ccb0caf12e37ba9a6fe03e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Figures/Super Gotinha.jpeg"
-dest_files=[ "res://.import/Super Gotinha.jpeg-cccffa4cd9ea28638d177810a6902579.stex" ]
+source_file="res://Figures/figura 17.png"
+dest_files=[ "res://.import/figura 17.png-7e68ab8fb6ccb0caf12e37ba9a6fe03e.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caderneta_capa.png-928688495e95f313c9f48584cfbb42b4.stex"
+path="res://.import/figura 5.png-be9c61d52c061084bacf318d2ea6c3b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Figures/caderneta_capa.png"
-dest_files=[ "res://.import/caderneta_capa.png-928688495e95f313c9f48584cfbb42b4.stex" ]
+source_file="res://Figures/figura 5.png"
+dest_files=[ "res://.import/figura 5.png-be9c61d52c061084bacf318d2ea6c3b0.stex" ]
 
 [params]
 

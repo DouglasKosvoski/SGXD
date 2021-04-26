@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gotinhaadolescentedoente.png-ae1ecd18a92651f100439311acc9d39a.stex"
+path="res://.import/figura 18.png-267886213316d562618f9b9e3b81176d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Figures/gotinhaadolescentedoente.png"
-dest_files=[ "res://.import/gotinhaadolescentedoente.png-ae1ecd18a92651f100439311acc9d39a.stex" ]
+source_file="res://Figures/figura 18.png"
+dest_files=[ "res://.import/figura 18.png-267886213316d562618f9b9e3b81176d.stex" ]
 
 [params]
 
