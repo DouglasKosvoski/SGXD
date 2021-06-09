@@ -120,7 +120,7 @@ animation = "idle"
 visible = false
 frames = SubResource( 3 )
 animation = "magnifier"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]

@@ -20,4 +20,5 @@ modulate = Color( 0.929412, 0.282353, 0.388235, 1 )
 position = Vector2( 2, 2 )
 normal = ExtResource( 1 )
 pressed = ExtResource( 2 )
+
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

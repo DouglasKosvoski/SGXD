@@ -17,4 +17,5 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 texture = ExtResource( 1 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

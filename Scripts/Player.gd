@@ -14,6 +14,9 @@ export(int) var current_level
 
 # UI touch screen joystick
 onready var joystick = $CanvasLayer/Joystick/Joystick_button
+# Throwable object
+onready var shootItem = preload("res://Scenes/ShootItem.tscn")
+
 const UP = Vector2(0,-1)
 # deadzone
 const joystick_trigger = 0.2
@@ -31,7 +34,6 @@ func _ready():
 		$CanvasLayer/Magnifier.visible = false
 		$CanvasLayer/Throw.visible = false
 	anim_setup()
-	
 
 func _physics_process(delta):
 	animation_control()
@@ -133,6 +135,15 @@ func magnifier_glass():
 func throw():
 	priority = 2
 	anim.play("throw")
+
 	if anim.animation == "throw" && anim.frame == anim.frames.get_frame_count("throw")-1:
 		priority = 0
+		spawnShoot()
+
+func spawnShoot():
+	var flagPrev = Vector2()
+	var flag = shootItem.instance()
+	var size = flag.get_node("KinematicBody2D/Sprite").texture.get_size()
+	flag.set_position(Vector2(position.x+(size.x*2), position.y))
+	get_tree().get_root().add_child(flag)
 	
