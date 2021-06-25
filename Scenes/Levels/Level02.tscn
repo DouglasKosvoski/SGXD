@@ -37,7 +37,7 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 78.6611, 40 )
-lvl_qtd_vacinas = 3
+lvl_qtd_vacinas = 7
 current_level = 2
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
@@ -67,16 +67,37 @@ scale = Vector2( 15, 0.5 )
 position = Vector2( 177, 74 )
 
 [node name="Vacina" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 0, 19 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 1"
 
 [node name="Vacina2" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 113, 28 )
+position = Vector2( 63, 19 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 2"
 
 [node name="Vacina3" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 302.989, 3.5 )
+position = Vector2( 113.989, 21 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 2"
+
+[node name="Vacina4" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 169.989, 21 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 2"
+
+[node name="Vacina5" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 233.989, 21 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 2"
+
+[node name="Vacina6" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 302.989, 21 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 2"
+
+[node name="Vacina7" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 379.989, 21 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 2"
 

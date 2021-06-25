@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_teen.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Scenes/Magnifier.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_mature.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/idle/idle_kid.png" type="Texture" id=6]
-[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_teen/running_adolescente2.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_mature/running_adulto0.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Personagens/super_gotinha/runing/run_teen/running_adolescente0.png" type="Texture" id=10]
@@ -121,7 +120,7 @@ animation = "idle"
 visible = false
 frames = SubResource( 3 )
 animation = "magnifier"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
@@ -141,35 +140,6 @@ position = Vector2( 208, 47 )
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource( 3 )]
 position = Vector2( 32, 103 )
 
-[node name="Vacinas" type="VBoxContainer" parent="CanvasLayer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 126.0
-margin_bottom = 17.0
-rect_clip_content = true
-custom_constants/separation = -5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CanvasLayer/Vacinas"]
-margin_right = 114.0
-margin_bottom = 12.0
-custom_fonts/font = ExtResource( 7 )
-text = "VACINAS COLETADAS"
-align = 1
-valign = 1
-autowrap = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Vacinas"]
-margin_top = 7.0
-margin_right = 114.0
-margin_bottom = 7.0
-rect_clip_content = true
-custom_constants/separation = -5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Caderneta" parent="CanvasLayer" instance=ExtResource( 42 )]
+
+[node name="Vacinas Container" type="Node2D" parent="CanvasLayer"]

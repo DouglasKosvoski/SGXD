@@ -1,12 +1,11 @@
 extends KinematicBody2D
 
 var MAX_SPEED = 50
-var ACCELERATION = MAX_SPEED/10
+var ACCELERATION = MAX_SPEED / 10
 const FRICTION = 0.5
 # How much MAX_SPEED and ACCELERATION will high throughout the levels
 const GAIN = 0.1
 
-export(String, FILE, "*.tres") var vacine_font
 # how many vaccines are present on the actual level
 export(int) var lvl_qtd_vacinas
 # level index, indicate what is the current player the player at
@@ -16,6 +15,9 @@ export(int) var current_level
 onready var joystick = $CanvasLayer/Joystick/Joystick_button
 # Throwable object
 onready var shootItem = preload("res://Scenes/ShootItem.tscn")
+# ui vaccine
+onready var uiVaccineNotCollected = preload("res://Scenes/ui_vaccine.tscn")
+onready var uiVaccineCollected = preload("res://Scenes/ui_vaccine_collected.tscn")
 
 const UP = Vector2(0,-1)
 # deadzone
@@ -34,7 +36,8 @@ func _ready():
 		$CanvasLayer/Magnifier.visible = false
 		$CanvasLayer/Throw.visible = false
 	anim_setup()
-
+	set_vaccines()
+	
 func _physics_process(delta):
 	animation_control()
 	motion = move_and_slide(motion)
@@ -103,16 +106,9 @@ func flip_animation():
 
 # responsible for creating and attaching new labels on vaccine colleted signal
 func collected(vacine_name):
-	var vbox = $CanvasLayer/Vacinas/VBoxContainer
-	var label = Label.new()
-	label.text = vacine_name
-	label.name = vacine_name
-	label.add_font_override("font", load(vacine_font))
-	#label.get("custom_fonts/font").set_size(36)
-	vbox.add_child(label)
+	# update number of vaccines collected
 	vacine_counter += 1
-	$CanvasLayer/Vacinas/Label.text = "Vacinas Coletadas: %s/%s" % [vacine_counter, lvl_qtd_vacinas]
-
+	set_vaccines()
 	if vacine_counter == lvl_qtd_vacinas:
 		level_complete()
 
@@ -147,3 +143,27 @@ func spawnShoot():
 	flag.set_position(Vector2(position.x+(size.x*2), position.y))
 	get_tree().get_root().add_child(flag)
 	
+func set_vaccines():
+	# max quantity of vaccines per line
+	var inline_qtd = 8
+	# spacing around each icon
+	var margin = 10
+	# pixel size of the icon
+	var vaccine_size = 13
+	
+	for i in range(lvl_qtd_vacinas):
+		# set new vaccine position on the screen
+		var vacPos = Vector2((i * vaccine_size) + margin, margin)
+		# check for a line break the let the spacing "breath" a little
+		if i > inline_qtd:
+			vacPos.x = ((i - inline_qtd-1) * vaccine_size) + margin
+			vacPos.y = margin + vaccine_size
+			
+		# create new vaccine ui icon
+		var vaccine = uiVaccineNotCollected.instance()
+		if vacine_counter > i:
+			vaccine = uiVaccineCollected.instance()
+		
+		# add to container
+		vaccine.set_position(Vector2(vacPos.x, vacPos.y))
+		$"CanvasLayer/Vacinas Container".add_child(vaccine)

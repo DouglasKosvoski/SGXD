@@ -35,7 +35,7 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, 40 )
-lvl_qtd_vacinas = 3
+lvl_qtd_vacinas = 15
 current_level = 1
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
@@ -46,17 +46,77 @@ editor_draw_limits = true
 [node name="Vaccines" type="Node2D" parent="."]
 
 [node name="Vacina" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 278.292, 88 )
+position = Vector2( 144, 89 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 412.498, 72 )
+position = Vector2( 176.644, 89 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 2"
 
 [node name="Vacina3" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 544.389, 103 )
+position = Vector2( 207.863, 89 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina4" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 239.011, 89 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina5" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 272.518, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina6" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 304.61, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina7" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 335.286, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina8" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 367.85, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina9" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 399.469, 89 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina10" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 428.258, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina11" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 457.99, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina12" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 491.969, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina13" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 520.757, 89 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina14" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 552.849, 90 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 3"
+
+[node name="Vacina15" parent="Vaccines" instance=ExtResource( 6 )]
+position = Vector2( 587.326, 89 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
