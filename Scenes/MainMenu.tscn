@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://Figures/figura 2.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://Roadmap/2 menu.png" type="Texture" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,17 +19,18 @@ ending = "res://Scenes/Ending.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-scale = Vector2( 0.125, 0.125 )
-texture = ExtResource( 3 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="Start" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -302.041
-margin_top = 133.061
-margin_right = -290.041
-margin_bottom = 153.061
+margin_left = -395.0
+margin_top = 186.0
+margin_right = -379.0
+margin_bottom = 206.0
 rect_scale = Vector2( 48.04, 6.76 )
 flat = true
 __meta__ = {
@@ -37,25 +38,26 @@ __meta__ = {
 }
 
 [node name="HowToPlay" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -302.041
-margin_top = 311.02
-margin_right = -290.041
-margin_bottom = 331.02
+margin_left = -395.0
+margin_top = 398.0
+margin_right = -379.0
+margin_bottom = 418.0
 rect_scale = Vector2( 48.04, 6.76 )
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Options" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -320.0
-margin_top = 481.704
+margin_top = 608.514
 margin_right = -308.0
-margin_bottom = 501.704
+margin_bottom = 628.514
 rect_scale = Vector2( 48.04, 6.76 )
 flat = true
 __meta__ = {
@@ -63,12 +65,13 @@ __meta__ = {
 }
 
 [node name="Credits" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -320.0
-margin_top = 642.245
-margin_right = -308.0
-margin_bottom = 662.245
+margin_top = 815.0
+margin_right = -307.0
+margin_bottom = 835.0
 rect_scale = Vector2( 48.04, 6.76 )
 flat = true
 __meta__ = {
@@ -76,19 +79,45 @@ __meta__ = {
 }
 
 [node name="Quit" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -320.0
-margin_top = 802.49
+margin_top = 1026.08
 margin_right = -308.0
-margin_bottom = 822.49
+margin_bottom = 1046.08
 rect_scale = Vector2( 48.04, 6.76 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sound" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1958.0
+margin_top = 186.0
+margin_right = 2123.0
+margin_bottom = 321.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Button" parent="CanvasLayer/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2123.0
+margin_top = 186.0
+margin_right = 2288.0
+margin_bottom = 321.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="CanvasLayer/Sprite/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sprite/HowToPlay" to="." method="_on_HowToPlay_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sprite/Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sprite/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sprite/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sprite/Sound" to="." method="_on_Sound_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sprite/Music" to="." method="_on_Music_pressed"]

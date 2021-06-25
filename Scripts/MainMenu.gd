@@ -20,3 +20,11 @@ func _on_Credits_pressed():
 
 func _on_Quit_pressed():
 	get_tree().change_scene(ending);
+
+func _on_Sound_pressed():
+	print("mute/unmute sound")
+	pass
+	
+func _on_Music_pressed():
+	print("mute/unmute music only")
+	pass
