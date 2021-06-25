@@ -21,13 +21,27 @@ scale = Vector2( 0.1875, 0.1875 )
 texture = ExtResource( 5 )
 centered = false
 
+[node name="Sprite2" type="Sprite" parent="Background"]
+modulate = Color( 0.0588235, 1, 0.556863, 1 )
+position = Vector2( 239.989, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="Background"]
+modulate = Color( 0.0588235, 1, 0.556863, 1 )
+position = Vector2( 479.989, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = ExtResource( 5 )
+centered = false
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 78.6611, 40 )
-lvl_qtd_vacinas = 2
+lvl_qtd_vacinas = 3
 current_level = 2
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
-limit_right = 240
+limit_right = 720
 limit_bottom = 135
 editor_draw_limits = true
 
@@ -38,16 +52,16 @@ position = Vector2( -8, 72 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Right" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 248, 72 )
+position = Vector2( 733.332, 72 )
 scale = Vector2( 0.5, 3 )
 
-[node name="Bottom" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 120, 144 )
-scale = Vector2( 5, 0.5 )
-
 [node name="Top" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 120, 8 )
-scale = Vector2( 5, 0.5 )
+position = Vector2( 360.645, 12 )
+scale = Vector2( 15, 0.5 )
+
+[node name="Bottom" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 360.645, 144 )
+scale = Vector2( 15, 0.5 )
 
 [node name="Vacinas" type="Node2D" parent="."]
 position = Vector2( 177, 74 )
@@ -57,7 +71,12 @@ scale = Vector2( 1, 1 )
 vacine_name = "TESTE 1"
 
 [node name="Vacina2" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( -28, 29 )
+position = Vector2( 113, 28 )
+scale = Vector2( 1, 1 )
+vacine_name = "TESTE 2"
+
+[node name="Vacina3" parent="Vacinas" instance=ExtResource( 7 )]
+position = Vector2( 302.989, 3.5 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 2"
 

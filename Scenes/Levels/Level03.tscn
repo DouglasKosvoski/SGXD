@@ -21,14 +21,27 @@ scale = Vector2( 0.1875, 0.188889 )
 texture = ExtResource( 1 )
 centered = false
 
+[node name="Sprite2" type="Sprite" parent="Background"]
+modulate = Color( 0.188235, 0.486275, 0.705882, 1 )
+position = Vector2( 240, -7.62939e-06 )
+scale = Vector2( 0.1875, 0.188889 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="Background"]
+modulate = Color( 0.188235, 0.486275, 0.705882, 1 )
+position = Vector2( 480, 9.09495e-13 )
+scale = Vector2( 0.1875, 0.188889 )
+texture = ExtResource( 1 )
+centered = false
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 80, 35 )
-vacine_font = "res://Addons/game_font.tres"
 lvl_qtd_vacinas = 2
 current_level = 3
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 2 )]
-limit_right = 240
+limit_right = 720
 limit_bottom = 135
 editor_draw_limits = true
 
@@ -36,31 +49,31 @@ editor_draw_limits = true
 position = Vector2( 0, -7.62939e-06 )
 
 [node name="Vacina" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 149, 77.4 )
+position = Vector2( 295.832, 77.5 )
 scale = Vector2( 1, 1 )
 vacine_name = "Teste 1"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 192, 77.4 )
+position = Vector2( 540.393, 104 )
 scale = Vector2( 1, 1 )
 vacine_name = "Teste 2"
 
 [node name="Boundaries" type="Node2D" parent="."]
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 4 )]
-position = Vector2( 120, 8 )
-scale = Vector2( 5, 0.5 )
+position = Vector2( 357.602, 12 )
+scale = Vector2( 15, 0.5 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 4 )]
-position = Vector2( 120, 144 )
-scale = Vector2( 5, 0.5 )
+position = Vector2( 357.602, 144 )
+scale = Vector2( 15, 0.5 )
 
 [node name="Left" parent="Boundaries" instance=ExtResource( 4 )]
 position = Vector2( -8, 72 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Right" parent="Boundaries" instance=ExtResource( 4 )]
-position = Vector2( 248, 72 )
+position = Vector2( 733.882, 72 )
 scale = Vector2( 0.5, 3 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 6 )]

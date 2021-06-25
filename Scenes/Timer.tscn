@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=1]
+
+[node name="Timer" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+segundos = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 142.0
+margin_top = 10.0
+margin_right = 190.0
+margin_bottom = 24.0
+text = "Tempo:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tempo" type="Label" parent="CanvasLayer"]
+margin_left = 190.0
+margin_top = 10.0
+margin_right = 206.0
+margin_bottom = 24.0
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
