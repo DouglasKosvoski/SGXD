@@ -1,9 +1,13 @@
 extends TouchScreenButton
 
-const radius = Vector2(64, 64)
-const boudarie = 128
-const return_accel = 20
-const threshold = 10
+# smaller button radius
+const radius = Vector2(5.5, 5.5)
+# max distance from the center that the smaller circle can go
+# essentially the bigger circle radius
+const boudarie = 20
+const return_accel = 10
+# distance from the center where movement will be detected
+const threshold = 5
 var ongoing_drag = -1
 
 func _physics_process(delta):
