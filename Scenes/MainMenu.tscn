@@ -104,7 +104,6 @@ __meta__ = {
 }
 
 [node name="Music" type="Button" parent="CanvasLayer/Sprite"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 2123.0
 margin_top = 186.0
 margin_right = 2288.0
