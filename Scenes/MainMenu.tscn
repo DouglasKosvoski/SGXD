@@ -5,9 +5,9 @@
 [ext_resource path="res://Sprites/ui/ui_volume.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ui/ui_music.png" type="Texture" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=2]
-
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -25,7 +25,6 @@ ending = "res://Scenes/Ending.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -88,28 +87,36 @@ __meta__ = {
 }
 
 [node name="Sound" type="Button" parent="CanvasLayer"]
-margin_left = 200.0
+margin_left = 192.0
 margin_top = 16.0
-margin_right = 224.0
+margin_right = 205.0
 margin_bottom = 36.0
-custom_styles/focus = SubResource( 2 )
-icon = ExtResource( 3 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Sound"]
+position = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+
 [node name="Music" type="Button" parent="CanvasLayer"]
-margin_left = 176.0
+margin_left = 206.0
 margin_top = 16.0
-margin_right = 200.0
+margin_right = 220.0
 margin_bottom = 36.0
-custom_styles/focus = SubResource( 1 )
-icon = ExtResource( 4 )
+custom_styles/focus = SubResource( 2 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Music"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 4 )
+centered = false
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/HowToPlay" to="." method="_on_HowToPlay_pressed"]

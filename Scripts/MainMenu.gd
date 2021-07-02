@@ -33,13 +33,13 @@ func _on_Quit_pressed():
 func _on_Sound_pressed():
 	sound = !sound
 	if sound:
-		$CanvasLayer/Sound.set_button_icon(sound_on)
+		$CanvasLayer/Sound/Sprite.set_texture(sound_on)
 	else:
-		$CanvasLayer/Sound.set_button_icon(sound_off)
+		$CanvasLayer/Sound/Sprite.set_texture(sound_off)
 	
 func _on_Music_pressed():
 	music = !music
 	if music:
-		$CanvasLayer/Music.set_button_icon(music_on)
+		$CanvasLayer/Music/Sprite.set_texture(music_on)
 	else:
-		$CanvasLayer/Music.set_button_icon(music_off)
+		$CanvasLayer/Music/Sprite.set_texture(music_off)
