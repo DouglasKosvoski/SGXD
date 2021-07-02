@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Sprites/Samples/street.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Boundaries.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=4]
@@ -16,117 +16,105 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Background" type="Sprite" parent="Background"]
-scale = Vector2( 0.1875, 0.1875 )
-texture = ExtResource( 1 )
-centered = false
-
-[node name="Background2" type="Sprite" parent="Background"]
-position = Vector2( 240, 0 )
-scale = Vector2( 0.1875, 0.1875 )
-texture = ExtResource( 1 )
-centered = false
-
-[node name="Background3" type="Sprite" parent="Background"]
-position = Vector2( 480, 0 )
-scale = Vector2( 0.1875, 0.1875 )
+[node name="Sprite" type="Sprite" parent="Background"]
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 80, 40 )
+position = Vector2( 96, 88 )
 lvl_qtd_vacinas = 13
 current_level = 1
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
-limit_right = 720
-limit_bottom = 135
+limit_right = 1645
+limit_bottom = 200
 editor_draw_limits = true
 
 [node name="Vaccines" type="Node2D" parent="."]
 
 [node name="Vacina" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 144, 89 )
+position = Vector2( 272, 128 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 176.644, 89 )
+position = Vector2( 335.863, 96 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 2"
 
 [node name="Vacina3" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 207.863, 89 )
+position = Vector2( 384, 128 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina4" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 239.011, 89 )
+position = Vector2( 435.655, 158 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina5" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 272.518, 90 )
+position = Vector2( 531.93, 142 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina6" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 304.61, 90 )
+position = Vector2( 544.93, 105 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina7" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 335.286, 90 )
+position = Vector2( 621.17, 177 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina8" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 367.85, 90 )
+position = Vector2( 756.874, 142 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina9" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 399.469, 89 )
+position = Vector2( 909.781, 142 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina10" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 428.258, 90 )
+position = Vector2( 1104, 172 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina11" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 457.99, 90 )
+position = Vector2( 1232, 121 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina12" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 491.969, 90 )
+position = Vector2( 1459, 143 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Vacina13" parent="Vaccines" instance=ExtResource( 6 )]
-position = Vector2( 520.757, 89 )
+position = Vector2( 1576, 145 )
 scale = Vector2( 1, 1 )
 vacine_name = "TESTE 3"
 
 [node name="Boundaries" type="Node2D" parent="."]
+visible = false
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 3 )]
-position = Vector2( 361.905, 12 )
-scale = Vector2( 15, 0.5 )
+position = Vector2( 832, 48 )
+scale = Vector2( 35, 1 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 3 )]
-position = Vector2( 361.905, 144 )
-scale = Vector2( 15, 0.5 )
+position = Vector2( 824, 208 )
+scale = Vector2( 35, 0.5 )
 
 [node name="Left" parent="Boundaries" instance=ExtResource( 3 )]
-position = Vector2( -8, 72 )
-scale = Vector2( 0.5, 3 )
+position = Vector2( -8, 96 )
+scale = Vector2( 0.5, 4 )
 
 [node name="Right" parent="Boundaries" instance=ExtResource( 3 )]
-position = Vector2( 732.418, 72 )
-scale = Vector2( 0.5, 3 )
+position = Vector2( 1656, 96 )
+scale = Vector2( 0.5, 4 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
 

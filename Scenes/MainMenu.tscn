@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Figures/figura 2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/ui/main_menu.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/ui/ui_volume.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/ui/ui_music.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,104 +25,96 @@ ending = "res://Scenes/Ending.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Start" type="Button" parent="CanvasLayer/Sprite"]
+[node name="Start" type="Button" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 88.0
+margin_top = 16.0
+margin_right = 147.0
+margin_bottom = 36.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="Button" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 80.0
+margin_top = 36.0
+margin_right = 160.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -395.0
-margin_top = 186.0
-margin_right = -379.0
-margin_bottom = 206.0
-rect_scale = Vector2( 48.04, 6.76 )
+margin_left = -24.4454
+margin_top = 58.4319
+margin_right = 23.5546
+margin_bottom = 78.4319
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HowToPlay" type="Button" parent="CanvasLayer/Sprite"]
+[node name="Credits" type="Button" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 88.0
+margin_top = 80.0
+margin_right = 152.0
+margin_bottom = 100.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -395.0
-margin_top = 398.0
-margin_right = -379.0
-margin_bottom = 418.0
-rect_scale = Vector2( 48.04, 6.76 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Options" type="Button" parent="CanvasLayer/Sprite"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -320.0
-margin_top = 608.514
-margin_right = -308.0
-margin_bottom = 628.514
-rect_scale = Vector2( 48.04, 6.76 )
+margin_left = -17.5
+margin_top = 100.0
+margin_right = 14.5
+margin_bottom = 120.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Credits" type="Button" parent="CanvasLayer/Sprite"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -320.0
-margin_top = 815.0
-margin_right = -307.0
-margin_bottom = 835.0
-rect_scale = Vector2( 48.04, 6.76 )
+[node name="Sound" type="Button" parent="CanvasLayer"]
+margin_left = 200.0
+margin_top = 16.0
+margin_right = 224.0
+margin_bottom = 36.0
+custom_styles/focus = SubResource( 2 )
+icon = ExtResource( 3 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="Button" parent="CanvasLayer/Sprite"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -320.0
-margin_top = 1026.08
-margin_right = -308.0
-margin_bottom = 1046.08
-rect_scale = Vector2( 48.04, 6.76 )
+[node name="Music" type="Button" parent="CanvasLayer"]
+margin_left = 176.0
+margin_top = 16.0
+margin_right = 200.0
+margin_bottom = 36.0
+custom_styles/focus = SubResource( 1 )
+icon = ExtResource( 4 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sound" type="Button" parent="CanvasLayer/Sprite"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 1958.0
-margin_top = 186.0
-margin_right = 2123.0
-margin_bottom = 321.0
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Music" type="Button" parent="CanvasLayer/Sprite"]
-margin_left = 2123.0
-margin_top = 186.0
-margin_right = 2288.0
-margin_bottom = 321.0
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="pressed" from="CanvasLayer/Sprite/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/HowToPlay" to="." method="_on_HowToPlay_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/Options" to="." method="_on_Options_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/Sound" to="." method="_on_Sound_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sprite/Music" to="." method="_on_Music_pressed"]
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sound" to="." method="_on_Sound_pressed"]
+[connection signal="pressed" from="CanvasLayer/Music" to="." method="_on_Music_pressed"]

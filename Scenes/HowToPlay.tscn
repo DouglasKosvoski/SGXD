@@ -19,12 +19,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -32.0
-margin_top = -33.0
-margin_right = 32.0
-margin_bottom = -19.0
+margin_left = -62.5
+margin_top = -22.0
+margin_right = 62.5
+margin_bottom = -8.0
 custom_fonts/font = ExtResource( 2 )
-text = "WASD OU TOUCH"
+text = "aaaaaaaaaa sdddddddasdasd"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -34,13 +34,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -25.5
-margin_top = -10.0
-margin_right = 25.5
-margin_bottom = 10.0
+margin_left = -25.0
+margin_top = 0.5
+margin_right = 26.0
+margin_bottom = 10.5
 custom_fonts/font = ExtResource( 2 )
-text = "RETURN"
+text = "Voltar"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

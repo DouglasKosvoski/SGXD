@@ -65,9 +65,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "throw",
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 28 ) ],
@@ -75,9 +75,9 @@ animations = [ {
 "name": "magnifier",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "run",
+"name": "throw",
 "speed": 5.0
 } ]
 
@@ -88,9 +88,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 20 ) ],
 "loop": true,
-"name": "throw",
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ) ],
@@ -98,15 +98,14 @@ animations = [ {
 "name": "magnifier",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
-"name": "run",
+"name": "throw",
 "speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
-vacine_font = "res://Addons/game_font.tres"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

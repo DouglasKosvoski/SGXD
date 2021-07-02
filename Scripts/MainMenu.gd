@@ -6,6 +6,15 @@ export(String, FILE, "*.tscn") var options
 export(String, FILE, "*.tscn") var credits
 export(String, FILE, "*.tscn") var ending
 
+var sound_on = preload("res://Sprites/ui/ui_volume.png")
+var sound_off = preload("res://Sprites/ui/ui_volume_off.png")
+var music_on = preload("res://Sprites/ui/ui_music.png")
+var music_off = preload("res://Sprites/ui/ui_music_off.png")
+
+var music = true
+var sound = true
+
+
 func _on_Start_pressed():
 	get_tree().change_scene(start);
 
@@ -22,9 +31,15 @@ func _on_Quit_pressed():
 	get_tree().change_scene(ending);
 
 func _on_Sound_pressed():
-	print("mute/unmute sound")
-	pass
+	sound = !sound
+	if sound:
+		$CanvasLayer/Sound.set_button_icon(sound_on)
+	else:
+		$CanvasLayer/Sound.set_button_icon(sound_off)
 	
 func _on_Music_pressed():
-	print("mute/unmute music only")
-	pass
+	music = !music
+	if music:
+		$CanvasLayer/Music.set_button_icon(music_on)
+	else:
+		$CanvasLayer/Music.set_button_icon(music_off)

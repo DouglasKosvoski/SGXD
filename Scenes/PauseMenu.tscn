@@ -49,38 +49,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Container/CenterContainer"]
-margin_left = 70.0
-margin_top = 39.0
-margin_right = 169.0
-margin_bottom = 95.0
+margin_left = 79.0
+margin_top = 45.0
+margin_right = 160.0
+margin_bottom = 89.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Container/CenterContainer/VBoxContainer"]
-margin_right = 74.0
-margin_bottom = 11.0
+margin_right = 81.0
+margin_bottom = 8.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 0.686275, 0, 1 )
-text = "PAUSE MENU"
+text = "Pausado"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/Container/CenterContainer/VBoxContainer"]
-margin_top = 15.0
-margin_right = 74.0
-margin_bottom = 32.0
+margin_top = 12.0
+margin_right = 81.0
+margin_bottom = 26.0
 custom_fonts/font = ExtResource( 2 )
-text = "CONTINUAR"
+text = "Continuar"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/Container/CenterContainer/VBoxContainer"]
-margin_top = 36.0
-margin_right = 74.0
-margin_bottom = 53.0
+margin_top = 30.0
+margin_right = 81.0
+margin_bottom = 44.0
 custom_fonts/font = ExtResource( 2 )
-text = "FECHAR O JOGO"
+text = "Fechar o jogo"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

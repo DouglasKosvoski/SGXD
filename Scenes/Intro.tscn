@@ -42,4 +42,5 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]

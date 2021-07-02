@@ -16,6 +16,7 @@ MainMenu = "res://Scenes/MainMenu.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
+visible = false
 scale = Vector2( 0.125, 0.125 )
 texture = ExtResource( 1 )
 centered = false
@@ -25,11 +26,41 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -27.0
-margin_top = -20.0
-margin_right = 27.0
+margin_left = -22.0
+margin_top = -19.0
+margin_right = 22.0
+margin_bottom = -5.0
 custom_fonts/font = ExtResource( 3 )
-text = "RETURN"
+text = "Voltar"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roles" type="Label" parent="CanvasLayer"]
+anchor_bottom = 1.0
+margin_right = 112.0
+custom_fonts/font = ExtResource( 3 )
+text = "Programação
+Arte
+Planejamento"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="People" type="Label" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_right = -1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Douglas Kosvoski
+Lucas J. Lopes
+Ana Bourscheid"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
