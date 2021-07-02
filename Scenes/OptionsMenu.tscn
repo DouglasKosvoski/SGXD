@@ -14,33 +14,91 @@ MainMenu = "res://Scenes/MainMenu.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -46.5
-margin_top = -9.5
-margin_right = 46.5
-margin_bottom = 9.5
-custom_fonts/font = ExtResource( 2 )
-text = "Slider Música
-Slider Som"
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReturnButton" type="Button" parent="."]
+[node name="Sound" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 4.0
+margin_right = 73.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 2 )
+text = "Volume Geral"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundSlider" type="HSlider" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = 16.5
+margin_right = 192.0
+margin_bottom = 32.5
+size_flags_horizontal = 0
+max_value = 90.0
+step = 5.0
+value = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 44.0
+margin_right = 73.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 2 )
+text = "Volume Música"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = 55.5
+margin_right = 192.0
+margin_bottom = 71.5
+size_flags_horizontal = 0
+max_value = 90.0
+step = 5.0
+value = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/Control"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -27.0
-margin_top = -36.0
-margin_right = 27.0
-margin_bottom = -16.0
+margin_left = 73.0
+margin_top = 59.0
+margin_right = 127.0
+margin_bottom = 79.0
 custom_fonts/font = ExtResource( 2 )
 text = "Voltar"
 flat = true
@@ -48,4 +106,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ReturnButton" to="." method="_on_ReturnButton_pressed"]

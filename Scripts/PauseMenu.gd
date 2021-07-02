@@ -19,6 +19,13 @@ func _on_ResumeButton_pressed():
 	get_parent().get_node("PauseButton").visible = true
 	get_tree().paused = false
 	
+func _on_OptionsButton_pressed():
+	$CenterContainer.visible = false
+	$OptionsMenu/CanvasLayer/Control.visible = true
+	$OptionsMenu/CanvasLayer/Control/SoundSlider.value = 20
+	$OptionsMenu.visible = true
+	$Panel.visible = false
+	
 func _on_QuitButton_pressed():
 	get_tree().paused = false
 	get_tree().change_scene(ending)

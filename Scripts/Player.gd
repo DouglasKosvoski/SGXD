@@ -120,7 +120,7 @@ func level_complete():
 	elif current_level == 2:
 		get_tree().change_scene("res://Scenes/Levels/Level03.tscn")
 	elif current_level == 3:
-		get_tree().change_scene("res://Scenes/Ending.tscn")
+		get_tree().change_scene("res://Scenes/Credits.tscn")
 
 func magnifier_glass():
 	priority = 3

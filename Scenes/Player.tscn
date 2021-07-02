@@ -65,14 +65,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "magnifier",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
@@ -88,14 +88,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "magnifier",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
@@ -119,7 +119,7 @@ animation = "idle"
 visible = false
 frames = SubResource( 3 )
 animation = "magnifier"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
