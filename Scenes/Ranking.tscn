@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Ranking.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sounds/mixkit-unlock-game-notification-253.wav" type="AudioStream" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -41,6 +44,7 @@ margin_left = -33.3775
 margin_top = 18.0615
 margin_right = 35.6225
 margin_bottom = 38.0615
+custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "Continuar"
 flat = true
@@ -48,4 +52,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

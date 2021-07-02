@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit_footsteps.wav-32e275ece6a81d9eedcb8ccbdf36d6ba.sample"
+
+[deps]
+
+source_file="res://Sounds/mixkit_footsteps.wav"
+dest_files=[ "res://.import/mixkit_footsteps.wav-32e275ece6a81d9eedcb8ccbdf36d6ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,8 +7,11 @@
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sounds/mixkit-light-rain-loop-2393.wav" type="AudioStream" id=8]
+[ext_resource path="res://Scripts/Level01.gd" type="Script" id=9]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Background" type="Node2D" parent="."]
 __meta__ = {
@@ -120,3 +123,10 @@ scale = Vector2( 0.5, 4 )
 
 [node name="Timer" parent="." instance=ExtResource( 7 )]
 segundos = 60
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

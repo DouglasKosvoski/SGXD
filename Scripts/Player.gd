@@ -40,8 +40,9 @@ func _ready():
 	
 func _physics_process(delta):
 	animation_control()
+	play_sounds()
 	motion = move_and_slide(motion)
-	
+
 # get the correct set of animations, dependant on level index
 func anim_setup():
 	if current_level == 1:
@@ -67,18 +68,22 @@ func animation_control():
 			if current_level != 1:
 				priority = 3
 			return
+			
 		elif Input.is_action_just_pressed("throw"):
 			if current_level != 1:
 				priority = 2
 			return
+			
 		elif Input.is_action_pressed("ui_right") or joystick.get_value().x >= joystick_trigger:
 			motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 			anim.play("run")
 			priority = 1
+			
 		elif Input.is_action_pressed("ui_left") or joystick.get_value().x <= -joystick_trigger:
 			motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 			anim.play("run")
 			priority = 1
+			
 		else:
 			motion.x = lerp(motion.x, 0, FRICTION)
 			anim.play("idle")
@@ -88,14 +93,20 @@ func animation_control():
 			motion.y = min(motion.y + ACCELERATION, -MAX_SPEED)
 			anim.play("run")
 			priority = 1
+			
 		elif Input.is_action_pressed("ui_down") or joystick.get_value().y > joystick_trigger:
 			motion.y = max(motion.y - ACCELERATION, +MAX_SPEED)
 			priority = 1
+			
 		else:
 			motion.y = lerp(motion.y, 0, FRICTION)
 			priority = 0
 
 	flip_animation()
+
+func play_sounds():
+	if anim.animation == "run":
+		$AudioStreamPlayer.play(0.0)
 
 # check which direction the player is moving
 func flip_animation():

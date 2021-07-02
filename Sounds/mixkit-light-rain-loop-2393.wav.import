@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-light-rain-loop-2393.wav-3d0be50f839220b853df39d20016088b.sample"
+
+[deps]
+
+source_file="res://Sounds/mixkit-light-rain-loop-2393.wav"
+dest_files=[ "res://.import/mixkit-light-rain-loop-2393.wav-3d0be50f839220b853df39d20016088b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

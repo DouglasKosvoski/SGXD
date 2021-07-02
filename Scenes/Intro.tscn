@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Intro.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,12 +21,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -36.5
-margin_top = -10.0
-margin_right = 36.5
-margin_bottom = 10.0
+margin_left = -32.0
+margin_top = 36.5
+margin_right = 41.0
+margin_bottom = 56.5
+custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
-text = "CONTINUAR"
+text = "Continuar"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,9 +42,14 @@ margin_right = 82.0
 margin_bottom = 49.0
 custom_fonts/font = ExtResource( 2 )
 text = "COLETE TODAS AS VACINAS ANTES QUE O TEMPO SE ESGOTE"
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
