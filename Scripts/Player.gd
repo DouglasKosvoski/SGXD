@@ -35,6 +35,11 @@ func _ready():
 	if current_level == 1:
 		$CanvasLayer/Magnifier.visible = false
 		$CanvasLayer/Throw.visible = false
+	
+	if AudioManager.sound_on:
+		$AudioStreamPlayer.volume_db = AudioManager.sound_volume
+	else:
+		$AudioStreamPlayer.volume_db = AudioManager.MIN_VOLUME_LEVEL
 	anim_setup()
 	set_vaccines()
 	
@@ -58,32 +63,26 @@ func animation_control():
 	if priority == 3:
 		motion = Vector2(0,0)
 		magnifier_glass()
-	
 	elif priority == 2:
 		motion = Vector2(0,0)
 		throw()
-	
 	else:
 		if Input.is_action_just_pressed("scan"):
 			if current_level != 1:
 				priority = 3
 			return
-			
 		elif Input.is_action_just_pressed("throw"):
 			if current_level != 1:
 				priority = 2
 			return
-			
 		elif Input.is_action_pressed("ui_right") or joystick.get_value().x >= joystick_trigger:
 			motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 			anim.play("run")
 			priority = 1
-			
 		elif Input.is_action_pressed("ui_left") or joystick.get_value().x <= -joystick_trigger:
 			motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 			anim.play("run")
 			priority = 1
-			
 		else:
 			motion.x = lerp(motion.x, 0, FRICTION)
 			anim.play("idle")
@@ -93,11 +92,9 @@ func animation_control():
 			motion.y = min(motion.y + ACCELERATION, -MAX_SPEED)
 			anim.play("run")
 			priority = 1
-			
 		elif Input.is_action_pressed("ui_down") or joystick.get_value().y > joystick_trigger:
 			motion.y = max(motion.y - ACCELERATION, +MAX_SPEED)
 			priority = 1
-			
 		else:
 			motion.y = lerp(motion.y, 0, FRICTION)
 			priority = 0
@@ -105,7 +102,8 @@ func animation_control():
 	flip_animation()
 
 func play_sounds():
-	if anim.animation == "run":
+	if anim.animation == "run" and anim.frame == anim.frames.get_frame_count("run")-1:
+		$AudioStreamPlayer.stream = AudioManager.player_footsteps_sfx
 		$AudioStreamPlayer.play(0.0)
 
 # check which direction the player is moving

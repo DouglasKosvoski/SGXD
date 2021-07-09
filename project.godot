@@ -18,6 +18,10 @@ config/name="SGXD"
 run/main_scene="res://Scenes/GameOpening.tscn"
 config/icon="res://Sprites/icon.png"
 
+[autoload]
+
+AudioManager="*res://Scripts/AudioManager.gd"
+
 [display]
 
 window/size/width=240

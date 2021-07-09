@@ -1,16 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/ui/main_menu.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/ui/ui_volume.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ui/ui_music.png" type="Texture" id=4]
-[ext_resource path="res://Sounds/mixkit-marimba-ringtone-1359.wav" type="AudioStream" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -37,7 +36,7 @@ margin_left = 88.0
 margin_top = 16.0
 margin_right = 147.0
 margin_bottom = 36.0
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,7 +48,7 @@ margin_left = 80.0
 margin_top = 36.0
 margin_right = 160.0
 margin_bottom = 56.0
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -62,7 +61,7 @@ margin_left = -24.4454
 margin_top = 58.4319
 margin_right = 23.5546
 margin_bottom = 78.4319
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,7 +73,7 @@ margin_left = 88.0
 margin_top = 80.0
 margin_right = 152.0
 margin_bottom = 100.0
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -88,24 +87,24 @@ margin_left = -17.5
 margin_top = 100.0
 margin_right = 14.5
 margin_bottom = 120.0
-custom_styles/focus = SubResource( 3 )
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sound" type="Button" parent="CanvasLayer"]
-margin_left = 192.0
-margin_top = 16.0
-margin_right = 205.0
-margin_bottom = 36.0
 custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer/Sound"]
+[node name="Audio" type="Button" parent="CanvasLayer"]
+margin_left = 192.0
+margin_top = 16.0
+margin_right = 205.0
+margin_bottom = 36.0
+custom_styles/focus = SubResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Audio"]
 position = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 centered = false
@@ -115,7 +114,7 @@ margin_left = 206.0
 margin_top = 16.0
 margin_right = 220.0
 margin_bottom = 36.0
-custom_styles/focus = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -129,15 +128,13 @@ centered = false
 [node name="ButtonSFX" type="AudioStreamPlayer" parent="CanvasLayer"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sound" to="." method="_on_Sound_pressed"]
+[connection signal="pressed" from="CanvasLayer/Audio" to="." method="_on_Audio_pressed"]
 [connection signal="pressed" from="CanvasLayer/Music" to="." method="_on_Music_pressed"]
 [connection signal="finished" from="CanvasLayer/ButtonSFX" to="." method="_on_ButtonSFX_finished"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
