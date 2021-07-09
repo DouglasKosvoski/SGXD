@@ -20,7 +20,7 @@ __meta__ = {
 }
 start = "res://Scenes/Intro.tscn"
 howtoplay = "res://Scenes/HowToPlay.tscn"
-options = "res://Scenes/OptionsMenu.tscn"
+options = "res://Scenes/PauseMenu.tscn"
 credits = "res://Scenes/Credits.tscn"
 ending = "res://Scenes/Ending.tscn"
 

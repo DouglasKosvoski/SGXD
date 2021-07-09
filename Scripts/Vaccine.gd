@@ -15,5 +15,8 @@ func _on_Area2D_body_entered(body):
 		body.collected(vacine_name)
 		$AudioStreamPlayer2D.play()
 
+func update_volume():
+	$AudioStreamPlayer2D.volume_db = AudioManager.audio_volume
+
 func _on_AudioStreamPlayer2D_finished():
 	queue_free()

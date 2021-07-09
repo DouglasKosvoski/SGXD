@@ -31,3 +31,6 @@ func _on_Timer_timeout():
 func _on_AudioStreamPlayer_finished():
 	if running:
 		$AudioStreamPlayer.play()
+
+func update_volume():
+	$AudioStreamPlayer.volume_db = AudioManager.audio_volume

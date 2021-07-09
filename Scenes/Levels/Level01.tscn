@@ -119,12 +119,13 @@ scale = Vector2( 0.5, 4 )
 position = Vector2( 1656, 96 )
 scale = Vector2( 0.5, 4 )
 
-[node name="PauseMenu" parent="." instance=ExtResource( 5 )]
-
 [node name="Timer" parent="." instance=ExtResource( 7 )]
 segundos = 60
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 5 )]
+return_to = "Level"
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

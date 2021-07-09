@@ -1,16 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Sprites/buttons/botao_pausa.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/OptionsMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="PauseMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+return_to = "Main Menu"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
@@ -19,6 +26,7 @@ layer = 2
 margin_left = 201.989
 margin_right = 239.989
 margin_bottom = 32.0
+custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 icon = ExtResource( 3 )
 flat = true
@@ -28,27 +36,111 @@ __meta__ = {
 
 [node name="Container" type="Container" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-ending = "res://Scenes/Ending.tscn"
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Container"]
-visible = false
 modulate = Color( 1, 1, 1, 0.784314 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="OptionsMenu" type="Control" parent="CanvasLayer/Container"]
+margin_right = 40.0
+margin_bottom = 40.0
 __meta__ = {
-"_edit_lock_": true
+"_edit_use_anchors_": false
 }
 
-[node name="OptionsMenu" parent="CanvasLayer/Container" instance=ExtResource( 4 )]
+[node name="Audio" type="Label" parent="CanvasLayer/Container/OptionsMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 4.0
+margin_right = 73.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 2 )
+text = "Volume Efeitos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioSlider" type="HSlider" parent="CanvasLayer/Container/OptionsMenu"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = 16.5
+margin_right = 192.0
+margin_bottom = 32.5
+size_flags_horizontal = 0
+step = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="CanvasLayer/Container/OptionsMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 44.0
+margin_right = 73.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 2 )
+text = "Volume Música"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/Container/OptionsMenu"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 8.0
+margin_top = 55.5
+margin_right = 192.0
+margin_bottom = 71.5
+size_flags_horizontal = 0
+max_value = 90.0
+step = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/Container/OptionsMenu"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 73.0
+margin_top = 59.0
+margin_right = 127.0
+margin_bottom = 79.0
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+text = "Voltar"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Container"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -73,6 +165,7 @@ __meta__ = {
 margin_top = 12.0
 margin_right = 81.0
 margin_bottom = 26.0
+custom_styles/focus = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Continuar"
 flat = true
@@ -84,6 +177,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 81.0
 margin_bottom = 44.0
+custom_styles/focus = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Opções"
 flat = true
@@ -95,6 +189,7 @@ __meta__ = {
 margin_top = 48.0
 margin_right = 81.0
 margin_bottom = 62.0
+custom_styles/focus = SubResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "Fechar o jogo"
 flat = true
@@ -102,7 +197,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="CanvasLayer/PauseButton" to="CanvasLayer/Container" method="_on_PauseButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/ResumeButton" to="CanvasLayer/Container" method="_on_ResumeButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/OptionsButton" to="CanvasLayer/Container" method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/QuitButton" to="CanvasLayer/Container" method="_on_QuitButton_pressed"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="Fx" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Container/OptionsMenu/AudioSlider" to="." method="_on_AudioSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Container/OptionsMenu/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Container/OptionsMenu/ReturnButton" to="." method="_on_ReturnButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Container/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
