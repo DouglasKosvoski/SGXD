@@ -27,7 +27,7 @@ margin_right = 100.5
 margin_bottom = 19.5
 custom_fonts/font = ExtResource( 2 )
 text = "Ranking
-Insira seu nome para contabilizar seu tempo e estatisticas"
+Insira seu nome para contabilizar seu tempo e estatisticas ao final do jogo."
 align = 1
 autowrap = true
 __meta__ = {

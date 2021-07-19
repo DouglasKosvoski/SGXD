@@ -21,6 +21,7 @@ config/icon="res://Sprites/icon.png"
 [autoload]
 
 AudioManager="*res://Scripts/AudioManager.gd"
+Globals="*res://Scripts/Globals.gd"
 
 [display]
 

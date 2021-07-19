@@ -1,13 +1,171 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Caderneta.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/buttons/button_caderneta.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/ui/booklet_blank.png" type="Texture" id=3]
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Sprites/ui/ui_return.png" type="Texture" id=5]
 
 [node name="Caderneta" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="Icon" type="TouchScreenButton" parent="."]
 position = Vector2( 208, 104 )
 normal = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 0, -1 )
+scale = Vector2( 1, 1.01481 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="qtd_vaccines" type="Node2D" parent="Node2D"]
+position = Vector2( 120, 68.25 )
+scale = Vector2( 1, 1.0037 )
+
+[node name="qtd_coletadas" type="Label" parent="Node2D/qtd_vaccines"]
+margin_left = 88.0
+margin_top = 35.0
+margin_right = 114.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 4 )
+text = "13"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="qtd_divisor" type="Label" parent="Node2D/qtd_vaccines"]
+margin_left = 88.0
+margin_top = 42.0
+margin_right = 114.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 4 )
+text = "/"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="qtd_total" type="Label" parent="Node2D/qtd_vaccines"]
+margin_left = 88.0
+margin_top = 52.0
+margin_right = 114.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 4 )
+text = "15"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvl_data" type="Node2D" parent="Node2D"]
+
+[node name="level_label" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 66.0
+margin_bottom = 39.0
+custom_fonts/font = ExtResource( 4 )
+text = "Fase"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_number" type="Label" parent="Node2D/lvl_data"]
+margin_left = 74.0
+margin_top = 16.0
+margin_right = 120.0
+margin_bottom = 39.0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_name" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 116.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 4 )
+text = "Infância"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 56.0
+margin_right = 116.0
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 4 )
+text = "Pontuação"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_number" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 72.2352
+margin_right = 116.0
+margin_bottom = 87.2352
+custom_fonts/font = ExtResource( 4 )
+text = "132132131"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 88.3241
+margin_right = 116.0
+margin_bottom = 104.324
+custom_fonts/font = ExtResource( 4 )
+text = "Tempo"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time_number" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 104.0
+margin_right = 116.0
+margin_bottom = 119.0
+custom_fonts/font = ExtResource( 4 )
+text = "06:30:13"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return_Button" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( 7.82016, 9.67728 )
+normal = ExtResource( 5 )
 
 [connection signal="pressed" from="Icon" to="." method="_on_CadernetaButton_pressed"]
+[connection signal="pressed" from="Node2D/Return_Button" to="." method="_on_Return_Button_pressed"]

@@ -39,4 +39,5 @@ func _process(delta):
 			destination = original_position
 			
 func _on_NPC_Area2D_body_entered(body):
-	print(body.name)
+	if body.name == "Player":
+		body.hurt()

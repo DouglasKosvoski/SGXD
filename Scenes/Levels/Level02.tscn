@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sprites/Samples/street.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Boundaries.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/NPC_negacionista_nariz.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/NPC_negacionista_com_mascara.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/NPC_negacionista_sem_mascara.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/NPC_negacionista_cabelo_amarrado.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,90 +21,81 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Background"]
-modulate = Color( 0.0588235, 1, 0.556863, 1 )
-scale = Vector2( 0.1875, 0.1875 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="Sprite2" type="Sprite" parent="Background"]
-modulate = Color( 0.0588235, 1, 0.556863, 1 )
-position = Vector2( 239.989, 0 )
-scale = Vector2( 0.1875, 0.1875 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="Sprite3" type="Sprite" parent="Background"]
-modulate = Color( 0.0588235, 1, 0.556863, 1 )
-position = Vector2( 479.989, 0 )
-scale = Vector2( 0.1875, 0.1875 )
-texture = ExtResource( 5 )
+modulate = Color( 1, 0.862745, 0.368627, 1 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 78.6611, 40 )
+position = Vector2( 96, 88 )
 lvl_qtd_vacinas = 7
 current_level = 2
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
-limit_right = 720
-limit_bottom = 135
+limit_right = 1644
+limit_bottom = 199
 editor_draw_limits = true
 
+[node name="Vaccines" type="Node2D" parent="."]
+position = Vector2( 177, 74 )
+
+[node name="Vacina" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 31, 70 )
+scale = Vector2( 1, 1 )
+vacine_name = "0"
+
+[node name="Vacina2" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 151, 46 )
+scale = Vector2( 1, 1 )
+vacine_name = "1"
+
+[node name="Vacina3" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 375, 78 )
+scale = Vector2( 1, 1 )
+vacine_name = "2"
+
+[node name="Vacina4" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 647, 62 )
+scale = Vector2( 1, 1 )
+vacine_name = "3"
+
+[node name="Vacina5" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 799, 94 )
+scale = Vector2( 1, 1 )
+vacine_name = "4"
+
+[node name="Vacina6" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 1079, 70 )
+scale = Vector2( 1, 1 )
+vacine_name = "5"
+
+[node name="Vacina7" parent="Vaccines" instance=ExtResource( 7 )]
+position = Vector2( 1303, 70 )
+scale = Vector2( 1, 1 )
+vacine_name = "6"
+
 [node name="Boundaries" type="Node2D" parent="."]
+visible = false
 
 [node name="Left" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( -8, 72 )
+position = Vector2( -8, 128 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Right" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 733.332, 72 )
+position = Vector2( 1656, 128 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 360.645, 12 )
-scale = Vector2( 15, 0.5 )
+position = Vector2( 820.959, 59.8794 )
+scale = Vector2( 35, 0.5 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 360.645, 144 )
-scale = Vector2( 15, 0.5 )
+position = Vector2( 821.575, 207.515 )
+scale = Vector2( 35, 0.5 )
 
-[node name="Vacinas" type="Node2D" parent="."]
-position = Vector2( 177, 74 )
+[node name="Timer" parent="." instance=ExtResource( 5 )]
+segundos = 60
 
-[node name="Vacina" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 0, 19 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 1"
-
-[node name="Vacina2" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 63, 19 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
-
-[node name="Vacina3" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 113.989, 21 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
-
-[node name="Vacina4" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 169.989, 21 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
-
-[node name="Vacina5" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 233.989, 21 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
-
-[node name="Vacina6" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 302.989, 21 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
-
-[node name="Vacina7" parent="Vacinas" instance=ExtResource( 7 )]
-position = Vector2( 379.989, 21 )
-scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="PauseMenu" parent="." instance=ExtResource( 2 )]
 margin_left = 600.0
@@ -107,3 +103,38 @@ margin_top = 376.0
 margin_right = 600.0
 margin_bottom = 376.0
 return_to = "Level"
+
+[node name="Npcs" type="Node2D" parent="."]
+
+[node name="NPC" parent="Npcs" instance=ExtResource( 8 )]
+position = Vector2( 104, 144 )
+dest_x = 248
+dest_y = 144
+flipped = true
+
+[node name="NPC2" parent="Npcs" instance=ExtResource( 9 )]
+position = Vector2( 240, 152 )
+dest_x = 80
+dest_y = 152
+
+[node name="NPC3" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 208, 120 )
+dest_x = 72
+dest_y = 120
+
+[node name="NPC4" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 168, 176 )
+dest_x = 304
+dest_y = 176
+flipped = true
+
+[node name="NPC5" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 432, 96 )
+dest_x = 512
+dest_y = 176
+flipped = true
+
+[node name="NPC6" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 736, 176 )
+dest_x = 656
+dest_y = 96

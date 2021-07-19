@@ -30,8 +30,10 @@ var anim
 var priority = 1
 
 func _ready():
+	Globals.current_level = current_level
 	MAX_SPEED = MAX_SPEED + (MAX_SPEED * (GAIN * current_level))
 	ACCELERATION = MAX_SPEED / 10
+	
 	if current_level == 1:
 		$CanvasLayer/Magnifier.visible = false
 		$CanvasLayer/Throw.visible = false
@@ -42,7 +44,7 @@ func _ready():
 		$AudioStreamPlayer.volume_db = AudioManager.MIN_VOLUME_LEVEL
 	anim_setup()
 	set_vaccines()
-	
+
 func _physics_process(delta):
 	animation_control()
 	play_sounds()
@@ -60,7 +62,10 @@ func anim_setup():
 
 # control which animation is currently playing and in what order or direction
 func animation_control():
-	if priority == 3:
+	if priority == 4:
+		motion = Vector2(0,0)
+		take_damage()
+	elif priority == 3:
 		motion = Vector2(0,0)
 		magnifier_glass()
 	elif priority == 2:
@@ -101,10 +106,19 @@ func animation_control():
 
 	flip_animation()
 
+# called on collision with npcs
+func hurt():
+	priority = 4
+	
+func take_damage():
+	anim.play("hurt")
+	if anim.animation == "hurt" && anim.frame == anim.frames.get_frame_count("hurt")-1:
+		priority = 0
+
 func play_sounds():
 	if anim.animation == "run" and anim.frame == anim.frames.get_frame_count("run")-1:
 		$AudioStreamPlayer.stream = AudioManager.player_footsteps_sfx
-		$AudioStreamPlayer.play(0.0)
+#		$AudioStreamPlayer.play(0.0)
 
 # check which direction the player is moving
 func flip_animation():
@@ -117,6 +131,14 @@ func flip_animation():
 func collected(vacine_name):
 	# update number of vaccines collected
 	vacine_counter += 1
+	Globals.total_score += 500
+	if Globals.current_level == 1:
+		Globals.lvl1_collected_vaccines[int(vacine_name)] = 1
+	elif Globals.current_level == 2:
+		Globals.lvl2_collected_vaccines[int(vacine_name)] = 1
+	elif Globals.current_level == 3:
+		Globals.lvl3_collected_vaccines[int(vacine_name)] = 1
+		
 	set_vaccines()
 	if vacine_counter == lvl_qtd_vacinas:
 		level_complete()
@@ -125,10 +147,13 @@ func collected(vacine_name):
 # futher on will also manage timeout on level timer
 func level_complete():
 	if current_level == 1:
+		Globals.lvl1_time_conclusion = OS.get_time()
 		get_tree().change_scene("res://Scenes/Levels/Level02.tscn")
 	elif current_level == 2:
+		Globals.lvl2_time_conclusion = OS.get_time()
 		get_tree().change_scene("res://Scenes/Levels/Level03.tscn")
 	elif current_level == 3:
+		Globals.lvl3_time_conclusion = OS.get_time()
 		get_tree().change_scene("res://Scenes/Credits.tscn")
 
 func magnifier_glass():

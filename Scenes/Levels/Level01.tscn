@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +9,10 @@
 [ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sounds/mixkit-light-rain-loop-2393.wav" type="AudioStream" id=8]
 [ext_resource path="res://Scripts/Level01.gd" type="Script" id=9]
-[ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/NPC_negacionista_nariz.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/NPC_negacionista_com_mascara.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/NPC_negacionista_sem_mascara.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/NPC_negacionista_cabelo_amarrado.tscn" type="PackedScene" id=13]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 9 )
@@ -26,6 +29,7 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 96, 88 )
+z_index = 1
 lvl_qtd_vacinas = 13
 current_level = 1
 
@@ -36,70 +40,70 @@ editor_draw_limits = true
 
 [node name="Vaccines" type="Node2D" parent="."]
 
-[node name="Vacina" parent="Vaccines" instance=ExtResource( 6 )]
+[node name="Vacina1" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 272, 128 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE"
+vacine_name = "0"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 335.863, 96 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 2"
+vacine_name = "1"
 
 [node name="Vacina3" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 384, 128 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "2"
 
 [node name="Vacina4" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 435.655, 158 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "3"
 
 [node name="Vacina5" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 531.93, 142 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "4"
 
 [node name="Vacina6" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 544.93, 105 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "5"
 
 [node name="Vacina7" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 621.17, 177 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "6"
 
 [node name="Vacina8" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 756.874, 142 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "7"
 
 [node name="Vacina9" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 909.781, 142 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "8"
 
 [node name="Vacina10" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 1104, 172 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "9"
 
 [node name="Vacina11" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 1232, 121 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "10"
 
 [node name="Vacina12" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 1459, 143 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "11"
 
 [node name="Vacina13" parent="Vaccines" instance=ExtResource( 6 )]
 position = Vector2( 1576, 145 )
 scale = Vector2( 1, 1 )
-vacine_name = "TESTE 3"
+vacine_name = "12"
 
 [node name="Boundaries" type="Node2D" parent="."]
 visible = false
@@ -109,7 +113,7 @@ position = Vector2( 832, 48 )
 scale = Vector2( 35, 1 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 3 )]
-position = Vector2( 824, 208 )
+position = Vector2( 824, 211 )
 scale = Vector2( 35, 0.5 )
 
 [node name="Left" parent="Boundaries" instance=ExtResource( 3 )]
@@ -129,40 +133,39 @@ stream = ExtResource( 8 )
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
 return_to = "Level"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Npcs" type="Node2D" parent="."]
 
-[node name="NPC" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 70, 150 )
-dest_x = 200
-dest_y = 150
+[node name="NPC" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 104, 144 )
+dest_x = 248
+dest_y = 144
 flipped = true
 
-[node name="NPC3" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 430, 96 )
+[node name="NPC2" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 240, 152 )
+dest_x = 80
+dest_y = 152
+
+[node name="NPC3" parent="Npcs" instance=ExtResource( 12 )]
+position = Vector2( 208, 120 )
+dest_x = 72
+dest_y = 120
+
+[node name="NPC4" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 168, 176 )
+dest_x = 304
+dest_y = 176
+flipped = true
+
+[node name="NPC5" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 432, 96 )
 dest_x = 512
 dest_y = 176
 flipped = true
 
-[node name="NPC6" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 656, 136 )
-dest_x = 512
-dest_y = 136
-
-[node name="NPC4" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 480, 80 )
-dest_x = 592
-dest_y = 80
-flipped = true
-
-[node name="NPC5" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 664, 96 )
-dest_x = 736
-dest_y = 176
-flipped = true
-
-[node name="NPC2" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( 216, 170 )
-dest_x = 70
-dest_y = 170
+[node name="NPC6" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 736, 176 )
+dest_x = 656
+dest_y = 96
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

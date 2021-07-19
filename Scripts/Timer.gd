@@ -14,9 +14,9 @@ func _ready():
 	$Timer.start(segundos+1)
 	
 func _process(delta):
-	if int($Timer.get_time_left()) < segundos*0.15:
+	if int($Timer.get_time_left()) < 10:
 		$AudioStreamPlayer.pitch_scale = 2.5
-	elif int($Timer.get_time_left()) < segundos*0.33:
+	elif int($Timer.get_time_left()) < 20:
 		$AudioStreamPlayer.pitch_scale = 2
 		
 	if running:
