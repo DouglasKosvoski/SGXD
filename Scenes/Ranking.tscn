@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Ranking.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/ui/outline.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -15,6 +16,20 @@ __meta__ = {
 next_scene = "res://Scenes/MainMenu.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_right = 240.0
+margin_bottom = 136.0
+color = Color( 0.227451, 0.227451, 0.227451, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+scale = Vector2( 0.1, 0.100741 )
+texture = ExtResource( 3 )
+centered = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
@@ -45,6 +60,7 @@ margin_right = 35.6225
 margin_bottom = 38.0615
 custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.509804, 1, 0.337255, 1 )
 text = "Continuar"
 flat = true
 __meta__ = {

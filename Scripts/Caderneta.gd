@@ -78,8 +78,8 @@ func set_vaccines():
 		vaccine.set_position(Vector2(vacPos.x, vacPos.y))
 		$"Node2D/Vaccines_holder".add_child(vaccine)
 		
-func _on_CadernetaButton_pressed(asd):
-	from_level_complete = asd
+func _on_CadernetaButton_pressed():
+#	from_level_complete = asd
 	$Node2D.visible = true
 	$Icon.visible = false
 	get_tree().paused = true
