@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/Personagens/negacionista_nariz.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/NPC.gd" type="Script" id=3]
@@ -14,9 +14,6 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.86129, 12.0543 )
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 18.8771
-
 [node name="NPC" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -30,18 +27,4 @@ animation = "walk"
 position = Vector2( -0.222725, 3.45223 )
 shape = SubResource( 2 )
 
-[node name="scan_area" type="KinematicBody2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="scan_area"]
-position = Vector2( -0.222725, 3.45223 )
-shape = SubResource( 3 )
-disabled = true
-
-[node name="Area2D2" type="Area2D" parent="scan_area"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="scan_area/Area2D2"]
-position = Vector2( -0.222725, 3.45223 )
-shape = SubResource( 3 )
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_NPC_Area2D_body_entered"]
-[connection signal="body_entered" from="scan_area/Area2D2" to="." method="_on_NPC_Area2D_body_entered"]

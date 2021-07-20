@@ -37,21 +37,5 @@ func _input(event):
 			selected = false
 			
 
-
-
 func _on_Area2D_body_entered(body):
 	print("Name: ", body.name)
-
-
-func _on_Area2D_area_entered(area):
-	print("Area: ", area.name)
-
-
-func _on_Area2D_area_shape_entered(area_id, area, area_shape, local_shape):
-	print("Alou")
-	pass # Replace with function body.
-
-
-func _on_Area2D_tree_entered():
-	print("aaaaaa")
-	pass # Replace with function body.

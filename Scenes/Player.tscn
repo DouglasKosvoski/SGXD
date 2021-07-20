@@ -136,7 +136,6 @@ animation = "hurt"
 visible = false
 frames = SubResource( 3 )
 animation = "hurt"
-frame = 1
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
@@ -148,6 +147,7 @@ animation = "hurt"
 
 [node name="Throw" parent="CanvasLayer" instance=ExtResource( 41 )]
 position = Vector2( 207.5, 76 )
+z_index = -10
 
 [node name="Joystick" parent="CanvasLayer" instance=ExtResource( 3 )]
 position = Vector2( 32, 103 )
