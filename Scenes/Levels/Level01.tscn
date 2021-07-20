@@ -109,6 +109,7 @@ scale = Vector2( 1, 1 )
 vacine_name = "12"
 
 [node name="Boundaries" type="Node2D" parent="."]
+visible = false
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 3 )]
 position = Vector2( 832, 51 )
