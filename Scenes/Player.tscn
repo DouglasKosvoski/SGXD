@@ -136,7 +136,6 @@ animation = "hurt"
 visible = false
 frames = SubResource( 3 )
 animation = "hurt"
-frame = 1
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]

@@ -79,7 +79,6 @@ scale = Vector2( 1, 1 )
 vacine_name = "6"
 
 [node name="Boundaries" type="Node2D" parent="."]
-visible = false
 
 [node name="Left" parent="Boundaries" instance=ExtResource( 6 )]
 position = Vector2( -8, 128 )
@@ -90,7 +89,7 @@ position = Vector2( 1656, 128 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 820.959, 59.8794 )
+position = Vector2( 820.959, 62.8794 )
 scale = Vector2( 35, 0.5 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 6 )]

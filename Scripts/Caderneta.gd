@@ -77,9 +77,12 @@ func set_vaccines():
 		# add to container
 		vaccine.set_position(Vector2(vacPos.x, vacPos.y))
 		$"Node2D/Vaccines_holder".add_child(vaccine)
-		
+
+func complete_from_area2d(asd):
+	from_level_complete = asd
+	_on_CadernetaButton_pressed()
+	
 func _on_CadernetaButton_pressed():
-#	from_level_complete = asd
 	$Node2D.visible = true
 	$Icon.visible = false
 	get_tree().paused = true
