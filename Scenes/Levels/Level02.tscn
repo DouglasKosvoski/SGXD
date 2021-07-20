@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=2]
@@ -11,8 +11,13 @@
 [ext_resource path="res://Scenes/NPC_negacionista_com_mascara.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/NPC_negacionista_sem_mascara.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/NPC_negacionista_cabelo_amarrado.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Level02.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 56 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="Background" type="Node2D" parent="."]
 __meta__ = {
@@ -138,3 +143,12 @@ flipped = true
 position = Vector2( 736, 176 )
 dest_x = 656
 dest_y = 96
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1608, 112 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -8, 32 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

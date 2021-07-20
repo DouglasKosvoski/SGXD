@@ -138,10 +138,7 @@ func collected(vacine_name):
 		Globals.lvl2_collected_vaccines[int(vacine_name)] = 1
 	elif Globals.current_level == 3:
 		Globals.lvl3_collected_vaccines[int(vacine_name)] = 1
-		
 	set_vaccines()
-	if vacine_counter == lvl_qtd_vacinas:
-		level_complete()
 
 # currently checks if every vaccine are collected
 # futher on will also manage timeout on level timer

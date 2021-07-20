@@ -5,6 +5,7 @@ onready var collected = preload("res://Scenes/collected_vaccine_booklet.tscn")
 var lvl_number
 var qtd_vac
 var vac_arr
+var from_level_complete = false
 
 func set_data():
 	$Node2D/lvl_data/level_number.text = str(Globals.current_level)
@@ -77,7 +78,8 @@ func set_vaccines():
 		vaccine.set_position(Vector2(vacPos.x, vacPos.y))
 		$"Node2D/Vaccines_holder".add_child(vaccine)
 		
-func _on_CadernetaButton_pressed():
+func _on_CadernetaButton_pressed(asd):
+	from_level_complete = asd
 	$Node2D.visible = true
 	$Icon.visible = false
 	get_tree().paused = true
@@ -89,3 +91,6 @@ func _on_Return_Button_pressed():
 	$Icon.visible = true
 	get_tree().paused = false
 	get_parent().get_parent().get_parent().get_child(6).get_child(0).get_child(0).visible = true
+	
+	if from_level_complete == true:
+		get_parent().get_parent().level_complete()
