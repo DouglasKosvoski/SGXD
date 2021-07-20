@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/buttons/button_caderneta.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/ui/booklet_blank.png" type="Texture" id=3]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Sprites/ui/ui_return.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/ui/ui_close_button.png" type="Texture" id=5]
 
 [node name="Caderneta" type="Node2D"]
 pause_mode = 2
@@ -25,6 +25,9 @@ position = Vector2( 0, -1 )
 scale = Vector2( 1, 1.01481 )
 texture = ExtResource( 3 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="qtd_vaccines" type="Node2D" parent="Node2D"]
 position = Vector2( 120, 68.25 )
@@ -75,9 +78,9 @@ __meta__ = {
 
 [node name="level_label" type="Label" parent="Node2D/lvl_data"]
 margin_left = 8.0
-margin_top = 16.0
+margin_top = 24.0
 margin_right = 66.0
-margin_bottom = 39.0
+margin_bottom = 47.0
 custom_fonts/font = ExtResource( 4 )
 text = "Fase"
 align = 2
@@ -88,9 +91,9 @@ __meta__ = {
 
 [node name="level_number" type="Label" parent="Node2D/lvl_data"]
 margin_left = 74.0
-margin_top = 16.0
+margin_top = 24.0
 margin_right = 120.0
-margin_bottom = 39.0
+margin_bottom = 47.0
 custom_fonts/font = ExtResource( 4 )
 text = "1"
 valign = 1
@@ -100,9 +103,9 @@ __meta__ = {
 
 [node name="level_name" type="Label" parent="Node2D/lvl_data"]
 margin_left = 8.0
-margin_top = 40.0
+margin_top = 48.0
 margin_right = 116.0
-margin_bottom = 56.0
+margin_bottom = 64.0
 custom_fonts/font = ExtResource( 4 )
 text = "Infância"
 align = 1
@@ -112,6 +115,7 @@ __meta__ = {
 }
 
 [node name="Score" type="Label" parent="Node2D/lvl_data"]
+visible = false
 margin_left = 8.0
 margin_top = 56.0
 margin_right = 116.0
@@ -125,6 +129,7 @@ __meta__ = {
 }
 
 [node name="Score_number" type="Label" parent="Node2D/lvl_data"]
+visible = false
 margin_left = 8.0
 margin_top = 72.2352
 margin_right = 116.0
@@ -139,6 +144,99 @@ __meta__ = {
 
 [node name="Time" type="Label" parent="Node2D/lvl_data"]
 margin_left = 8.0
+margin_top = 72.0
+margin_right = 116.0
+margin_bottom = 87.9999
+custom_fonts/font = ExtResource( 4 )
+text = "Tempo"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time_number" type="Label" parent="Node2D/lvl_data"]
+margin_left = 8.0
+margin_top = 87.6759
+margin_right = 116.0
+margin_bottom = 102.676
+custom_fonts/font = ExtResource( 4 )
+text = "06:30:13"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvl_data2" type="Node2D" parent="Node2D"]
+visible = false
+
+[node name="level_label" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 66.0
+margin_bottom = 39.0
+custom_fonts/font = ExtResource( 4 )
+text = "Fase"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_number" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 74.0
+margin_top = 16.0
+margin_right = 120.0
+margin_bottom = 39.0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_name" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 116.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 4 )
+text = "Infância"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 8.0
+margin_top = 56.0
+margin_right = 116.0
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 4 )
+text = "Pontuação"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_number" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 8.0
+margin_top = 72.2352
+margin_right = 116.0
+margin_bottom = 87.2352
+custom_fonts/font = ExtResource( 4 )
+text = "132132131"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Node2D/lvl_data2"]
+margin_left = 8.0
 margin_top = 88.3241
 margin_right = 116.0
 margin_bottom = 104.324
@@ -150,7 +248,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time_number" type="Label" parent="Node2D/lvl_data"]
+[node name="Time_number" type="Label" parent="Node2D/lvl_data2"]
 margin_left = 8.0
 margin_top = 104.0
 margin_right = 116.0
@@ -163,8 +261,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Vaccines_holder" type="Node2D" parent="Node2D"]
+
 [node name="Return_Button" type="TouchScreenButton" parent="Node2D"]
-position = Vector2( 7.82016, 9.67728 )
+position = Vector2( 8, 8 )
+scale = Vector2( 0.50562, 0.5 )
 normal = ExtResource( 5 )
 
 [connection signal="pressed" from="Icon" to="." method="_on_CadernetaButton_pressed"]
