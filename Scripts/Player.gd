@@ -35,7 +35,6 @@ func _ready():
 	ACCELERATION = MAX_SPEED / 10
 	
 	if current_level == 1:
-		$CanvasLayer/Magnifier.visible = false
 		$CanvasLayer/Throw.visible = false
 	
 	if AudioManager.sound_on:

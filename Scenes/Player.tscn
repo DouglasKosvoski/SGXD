@@ -70,14 +70,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "hurt",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 24 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 27 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 28 ) ],
@@ -98,14 +98,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "hurt",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ) ],
@@ -136,6 +136,7 @@ animation = "hurt"
 visible = false
 frames = SubResource( 3 )
 animation = "hurt"
+frame = 1
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
