@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/HowToPlay.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sprites/ui/outline.png" type="Texture" id=3]
+[ext_resource path="res://Figures/how_to_play.jpeg" type="Texture" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -18,51 +18,20 @@ MainMenu = "res://Scenes/MainMenu.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_right = 240.0
-margin_bottom = 136.0
-color = Color( 0.227451, 0.227451, 0.227451, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-scale = Vector2( 0.1, 0.100741 )
+scale = Vector2( 0.1875, 0.1875 )
 texture = ExtResource( 3 )
 centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 21.0
-margin_bottom = 10.0
-rect_scale = Vector2( 0.85, 0.85 )
-custom_fonts/font = ExtResource( 2 )
-text = "Computador
-Utilize as teclas direcionas ou WASD para controlar o gotinha e utilize os botões da interface com o mouse para arremessar lupas e realizar scans.
-
-Mobile
-Pressione e controle o personagem através dos controles touch screen no canto inferior esquerdo da tela e elementos da interface para realizar ações"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -24.0
-margin_top = 44.5
-margin_right = 27.0
-margin_bottom = 58.5
+margin_left = -120.0
+margin_top = -67.5
+margin_right = -69.0
+margin_bottom = -45.5
 custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 1, 0.0196078, 1 )
