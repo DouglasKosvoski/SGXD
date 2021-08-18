@@ -8,7 +8,7 @@
 
 [node name="About" type="Node2D"]
 script = ExtResource( 2 )
-next_scene = "res://Scenes/Goal.tscn"
+next_scene = "res://Scenes/MainMenu.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 240.0

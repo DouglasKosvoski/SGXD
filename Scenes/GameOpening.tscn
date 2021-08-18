@@ -55,7 +55,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_scene = "res://Scenes/About.tscn"
+next_scene = "res://Scenes/Goal.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

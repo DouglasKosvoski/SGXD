@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Ranking.gd" type="Script" id=1]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sprites/ui/outline.png" type="Texture" id=3]
+[ext_resource path="res://Figures/registrar.jpeg" type="Texture" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -11,64 +13,1796 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 next_scene = "res://Scenes/MainMenu.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_right = 240.0
-margin_bottom = 136.0
-color = Color( 0.227451, 0.227451, 0.227451, 1 )
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Name" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -43.5
+margin_right = 72.0
+margin_bottom = -19.5
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+max_lines_visible = 1
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
-scale = Vector2( 0.1, 0.100741 )
-texture = ExtResource( 3 )
-centered = false
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -100.5
-margin_top = -19.5
-margin_right = 100.5
-margin_bottom = 19.5
-custom_fonts/font = ExtResource( 2 )
-text = "Ranking
-Insira seu nome para contabilizar seu tempo e estatisticas ao final do jogo."
-align = 1
-autowrap = true
+[node name="Characters" type="Control" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Uppercase" type="Control" parent="CanvasLayer/Control/Characters"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -198.0
+margin_bottom = -111.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -33.3775
-margin_top = 18.0615
-margin_right = 35.6225
-margin_bottom = 38.0615
-custom_styles/focus = SubResource( 1 )
+[node name="A" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 54.234
+margin_top = 52.2183
+margin_right = 61.234
+margin_bottom = 64.2183
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.509804, 1, 0.337255, 1 )
-text = "Continuar"
+text = "A"
+align = 1
+valign = 1
+
+[node name="A" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/A"]
+margin_left = -2.085
+margin_top = -1.772
+margin_right = 9.915
+margin_bottom = 12.228
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
 flat = true
 __meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 66.0551
+margin_top = 51.681
+margin_right = 72.0551
+margin_bottom = 63.681
+custom_fonts/font = ExtResource( 2 )
+text = "B"
+align = 1
+valign = 1
+
+[node name="B" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/B"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 77.8202
+margin_top = 51.681
+margin_right = 82.8202
+margin_bottom = 63.681
+custom_fonts/font = ExtResource( 2 )
+text = "C"
+align = 1
+valign = 1
+
+[node name="C" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/C"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="D" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 89.8374
+margin_top = 51.5141
+margin_right = 95.8374
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "D"
+align = 1
+valign = 1
+
+[node name="D" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/D"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="E" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 101.062
+margin_top = 51.5141
+margin_right = 107.062
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "E"
+align = 1
+valign = 1
+
+[node name="E" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/E"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="F" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 112.765
+margin_top = 51.5141
+margin_right = 118.765
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "F"
+align = 1
+valign = 1
+
+[node name="F" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/F"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="G" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 125.28
+margin_top = 51.5141
+margin_right = 130.28
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "G"
+align = 1
+valign = 1
+
+[node name="G" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/G"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="H" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 136.488
+margin_top = 51.5141
+margin_right = 143.488
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "H"
+align = 1
+valign = 1
+
+[node name="H" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/H"]
+margin_left = -2.585
+margin_top = -1.022
+margin_right = 9.415
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="I" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 149.271
+margin_top = 51.5141
+margin_right = 153.271
+margin_bottom = 63.5141
+custom_fonts/font = ExtResource( 2 )
+text = "I"
+align = 1
+valign = 1
+
+[node name="I" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/I"]
+margin_left = -2.58501
+margin_top = -1.022
+margin_right = 9.41499
+margin_bottom = 12.978
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="J" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 160.111
+margin_top = 53.7308
+margin_right = 165.111
+margin_bottom = 61.7308
+custom_fonts/font = ExtResource( 2 )
+text = "J"
+align = 1
+valign = 1
+
+[node name="J" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/J"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="K" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 170.357
+margin_top = 53.7308
+margin_right = 177.357
+margin_bottom = 61.7308
+custom_fonts/font = ExtResource( 2 )
+text = "K"
+align = 1
+valign = 1
+
+[node name="K" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/K"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 47.1006
+margin_top = 64.6902
+margin_right = 53.1006
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "L"
+align = 1
+valign = 1
+
+[node name="L" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/L"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="M" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 58.185
+margin_top = 64.6902
+margin_right = 66.185
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "M"
+align = 1
+valign = 1
+
+[node name="M" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/M"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="N" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 70.1111
+margin_top = 64.6902
+margin_right = 77.1111
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "N"
+align = 1
+valign = 1
+
+[node name="N" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/N"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="O" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 82.3179
+margin_top = 64.6902
+margin_right = 87.3179
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "O"
+align = 1
+valign = 1
+
+[node name="O" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/O"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 93.5405
+margin_top = 64.6902
+margin_right = 99.5405
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "P"
+align = 1
+valign = 1
+
+[node name="P" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/P"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 106.455
+margin_top = 64.6902
+margin_right = 111.455
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "Q"
+align = 1
+valign = 1
+
+[node name="Q" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/Q"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 117.328
+margin_top = 64.6902
+margin_right = 124.328
+margin_bottom = 72.6902
+custom_fonts/font = ExtResource( 2 )
+text = "R"
+align = 1
+valign = 1
+
+[node name="R" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/R"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="S" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 128.616
+margin_top = 64.5852
+margin_right = 133.616
+margin_bottom = 72.5852
+custom_fonts/font = ExtResource( 2 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="S" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/S"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="T" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 138.158
+margin_top = 65.375
+margin_right = 145.158
+margin_bottom = 73.375
+custom_fonts/font = ExtResource( 2 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="T" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/T"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="U" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 150.185
+margin_top = 65.375
+margin_right = 157.185
+margin_bottom = 73.375
+custom_fonts/font = ExtResource( 2 )
+text = "U"
+align = 1
+valign = 1
+
+[node name="U" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/U"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 162.435
+margin_top = 65.375
+margin_right = 169.435
+margin_bottom = 73.375
+custom_fonts/font = ExtResource( 2 )
+text = "V"
+align = 1
+valign = 1
+
+[node name="V" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/V"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 173.402
+margin_top = 65.375
+margin_right = 180.402
+margin_bottom = 73.375
+custom_fonts/font = ExtResource( 2 )
+text = "W"
+align = 1
+valign = 1
+
+[node name="W" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/W"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 53.6499
+margin_top = 75.9047
+margin_right = 59.6499
+margin_bottom = 83.9047
+custom_fonts/font = ExtResource( 2 )
+text = "X"
+align = 1
+valign = 1
+
+[node name="X" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/X"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Y" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 64.6742
+margin_top = 75.9047
+margin_right = 70.6742
+margin_bottom = 83.9047
+custom_fonts/font = ExtResource( 2 )
+text = "Y"
+align = 1
+valign = 1
+
+[node name="Y" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/Y"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Z" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
+margin_left = 76.3284
+margin_top = 75.9047
+margin_right = 82.3284
+margin_bottom = 83.9047
+custom_fonts/font = ExtResource( 2 )
+text = "Z"
+align = 1
+valign = 1
+
+[node name="Z" type="Button" parent="CanvasLayer/Control/Characters/Uppercase/Z"]
+margin_left = -1.585
+margin_top = -2.272
+margin_right = 10.415
+margin_bottom = 11.728
+rect_scale = Vector2( 0.832, 0.802 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lowercase" type="Control" parent="CanvasLayer/Control/Characters"]
+modulate = Color( 0.482353, 0.796078, 1, 1 )
+margin_right = 42.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="a" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 86.5451
+margin_top = 74.7494
+margin_right = 93.5451
+margin_bottom = 86.7494
+custom_fonts/font = ExtResource( 2 )
+text = "a"
+align = 1
+valign = 1
+
+[node name="a" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/a"]
+margin_left = -2.328
+margin_top = -1.1593
+margin_right = 9.672
+margin_bottom = 12.8407
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="b" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 98.5257
+margin_top = 75.0007
+margin_right = 104.526
+margin_bottom = 87.0007
+custom_fonts/font = ExtResource( 2 )
+text = "b"
+align = 1
+valign = 1
+
+[node name="b" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/b"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 111.468
+margin_top = 75.2507
+margin_right = 116.468
+margin_bottom = 87.2507
+custom_fonts/font = ExtResource( 2 )
+text = "c"
+align = 1
+valign = 1
+
+[node name="c" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/c"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="d" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 123.485
+margin_top = 75.0839
+margin_right = 129.485
+margin_bottom = 87.0839
+custom_fonts/font = ExtResource( 2 )
+text = "d"
+align = 1
+valign = 1
+
+[node name="d" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/d"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="e" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 134.709
+margin_top = 75.0839
+margin_right = 140.709
+margin_bottom = 87.0839
+custom_fonts/font = ExtResource( 2 )
+text = "e"
+align = 1
+valign = 1
+
+[node name="e" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/e"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="f" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 146.413
+margin_top = 75.0839
+margin_right = 152.413
+margin_bottom = 87.0839
+custom_fonts/font = ExtResource( 2 )
+text = "f"
+align = 1
+valign = 1
+
+[node name="f" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/f"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="g" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 158.009
+margin_top = 72.9703
+margin_right = 163.009
+margin_bottom = 84.9703
+custom_fonts/font = ExtResource( 2 )
+text = "g"
+align = 1
+valign = 1
+
+[node name="g" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/g"]
+margin_left = -2.77345
+margin_top = 0.942425
+margin_right = 9.22655
+margin_bottom = 14.9424
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="h" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 169.636
+margin_top = 75.0839
+margin_right = 176.636
+margin_bottom = 87.0839
+custom_fonts/font = ExtResource( 2 )
+text = "h"
+align = 1
+valign = 1
+
+[node name="h" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/h"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="i" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 45.6182
+margin_top = 86.7585
+margin_right = 49.6182
+margin_bottom = 98.7585
+custom_fonts/font = ExtResource( 2 )
+text = "i"
+align = 1
+valign = 1
+
+[node name="i" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/i"]
+margin_left = -3.51855
+margin_top = -0.935873
+margin_right = 8.48145
+margin_bottom = 13.0641
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="j" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 56.9422
+margin_top = 88.3459
+margin_right = 61.9422
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "j"
+align = 1
+valign = 1
+
+[node name="j" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/j"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="k" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 67.1256
+margin_top = 88.3459
+margin_right = 74.1256
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "k"
+align = 1
+valign = 1
+
+[node name="k" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/k"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="l" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 79.3392
+margin_top = 88.3459
+margin_right = 85.3392
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "l"
+align = 1
+valign = 1
+
+[node name="l" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/l"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="m" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 90.4236
+margin_top = 88.3459
+margin_right = 98.4236
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "m"
+align = 1
+valign = 1
+
+[node name="m" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/m"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="n" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 102.35
+margin_top = 88.3459
+margin_right = 109.35
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "n"
+align = 1
+valign = 1
+
+[node name="n" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/n"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 114.556
+margin_top = 88.3459
+margin_right = 119.556
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "o"
+align = 1
+valign = 1
+
+[node name="o" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/o"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="p" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 125.779
+margin_top = 88.3459
+margin_right = 131.779
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "p"
+align = 1
+valign = 1
+
+[node name="p" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/p"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="q" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 138.516
+margin_top = 88.3459
+margin_right = 143.516
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "q"
+align = 1
+valign = 1
+
+[node name="q" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/q"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="r" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 150.273
+margin_top = 88.3459
+margin_right = 157.273
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "r"
+align = 1
+valign = 1
+
+[node name="r" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/r"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="s" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 162.677
+margin_top = 88.3459
+margin_right = 167.677
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "s"
+align = 1
+valign = 1
+
+[node name="s" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/s"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="t" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 172.392
+margin_top = 88.3459
+margin_right = 179.392
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "t"
+align = 1
+valign = 1
+
+[node name="t" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/t"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="u" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 183.985
+margin_top = 88.3459
+margin_right = 190.985
+margin_bottom = 96.3459
+custom_fonts/font = ExtResource( 2 )
+text = "u"
+align = 1
+valign = 1
+
+[node name="u" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/u"]
+margin_left = -2.328
+margin_top = -1.928
+margin_right = 9.672
+margin_bottom = 12.072
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="v" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 52.0956
+margin_top = 100.456
+margin_right = 59.0956
+margin_bottom = 108.456
+custom_fonts/font = ExtResource( 2 )
+text = "v"
+align = 1
+valign = 1
+
+[node name="v" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/v"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="w" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 63.4977
+margin_top = 100.428
+margin_right = 70.4977
+margin_bottom = 108.428
+custom_fonts/font = ExtResource( 2 )
+text = "w"
+align = 1
+valign = 1
+
+[node name="w" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/w"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 76.165
+margin_top = 100.428
+margin_right = 83.165
+margin_bottom = 108.428
+custom_fonts/font = ExtResource( 2 )
+text = "x"
+align = 1
+valign = 1
+
+[node name="x" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/x"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="y" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 87.1893
+margin_top = 100.428
+margin_right = 94.1893
+margin_bottom = 108.428
+custom_fonts/font = ExtResource( 2 )
+text = "y"
+align = 1
+valign = 1
+
+[node name="y" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/y"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="z" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
+margin_left = 98.8436
+margin_top = 100.428
+margin_right = 104.844
+margin_bottom = 108.428
+custom_fonts/font = ExtResource( 2 )
+text = "z"
+align = 1
+valign = 1
+
+[node name="z" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/z"]
+margin_left = -2.328
+margin_top = -1.953
+margin_right = 9.672
+margin_bottom = 12.047
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Symbols" type="Control" parent="CanvasLayer/Control/Characters"]
+modulate = Color( 0.231373, 1, 0.764706, 1 )
+margin_right = 42.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acento" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 120.469
+margin_top = 101.073
+margin_right = 125.469
+margin_bottom = 109.073
+custom_fonts/font = ExtResource( 2 )
+text = "´"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acento" type="Button" parent="CanvasLayer/Control/Characters/Symbols/acento"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crase" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 111.266
+margin_top = 100.837
+margin_right = 116.266
+margin_bottom = 108.837
+custom_fonts/font = ExtResource( 2 )
+text = "`"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crase" type="Button" parent="CanvasLayer/Control/Characters/Symbols/crase"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="interrogacao" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 132.449
+margin_top = 101.073
+margin_right = 138.449
+margin_bottom = 109.073
+custom_fonts/font = ExtResource( 2 )
+text = "?"
+align = 1
+valign = 1
+
+[node name="interrogacao" type="Button" parent="CanvasLayer/Control/Characters/Symbols/interrogacao"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exclamacao" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 144.201
+margin_top = 100.874
+margin_right = 149.201
+margin_bottom = 108.874
+custom_fonts/font = ExtResource( 2 )
+text = "!"
+align = 1
+valign = 1
+
+[node name="exclamacao" type="Button" parent="CanvasLayer/Control/Characters/Symbols/exclamacao"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hifen" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 156.218
+margin_top = 100.874
+margin_right = 161.218
+margin_bottom = 108.874
+custom_fonts/font = ExtResource( 2 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="hifen" type="Button" parent="CanvasLayer/Control/Characters/Symbols/hifen"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="underline" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 167.442
+margin_top = 100.874
+margin_right = 172.442
+margin_bottom = 108.874
+custom_fonts/font = ExtResource( 2 )
+text = "_"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="underline" type="Button" parent="CanvasLayer/Control/Characters/Symbols/underline"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barra" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
+margin_left = 177.959
+margin_top = 100.874
+margin_right = 183.959
+margin_bottom = 108.874
+custom_fonts/font = ExtResource( 2 )
+text = "/"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barra" type="Button" parent="CanvasLayer/Control/Characters/Symbols/barra"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numbers" type="Control" parent="CanvasLayer/Control/Characters"]
+modulate = Color( 0.792157, 0.568627, 1, 1 )
+margin_right = 42.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 64.2572
+margin_top = 112.948
+margin_right = 69.2572
+margin_bottom = 120.948
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Button" parent="CanvasLayer/Control/Characters/Numbers/0"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 75.294
+margin_top = 112.948
+margin_right = 80.294
+margin_bottom = 120.948
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="1" type="Button" parent="CanvasLayer/Control/Characters/Numbers/1"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 87.0453
+margin_top = 112.75
+margin_right = 92.0453
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="2" type="Button" parent="CanvasLayer/Control/Characters/Numbers/2"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 99.0625
+margin_top = 112.75
+margin_right = 104.063
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="3" type="Button" parent="CanvasLayer/Control/Characters/Numbers/3"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 110.287
+margin_top = 112.75
+margin_right = 115.287
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "4"
+align = 1
+valign = 1
+
+[node name="4" type="Button" parent="CanvasLayer/Control/Characters/Numbers/4"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 121.99
+margin_top = 112.75
+margin_right = 126.99
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="5" type="Button" parent="CanvasLayer/Control/Characters/Numbers/5"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 133.587
+margin_top = 112.75
+margin_right = 138.587
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "6"
+align = 1
+valign = 1
+
+[node name="6" type="Button" parent="CanvasLayer/Control/Characters/Numbers/6"]
+margin_left = -2.77345
+margin_top = -2.832
+margin_right = 9.22655
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 145.214
+margin_top = 112.75
+margin_right = 150.214
+margin_bottom = 120.75
+custom_fonts/font = ExtResource( 2 )
+text = "7"
+align = 1
+valign = 1
+
+[node name="7" type="Button" parent="CanvasLayer/Control/Characters/Numbers/7"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 157.21
+margin_top = 112.445
+margin_right = 162.21
+margin_bottom = 120.445
+custom_fonts/font = ExtResource( 2 )
+text = "8"
+align = 1
+valign = 1
+
+[node name="8" type="Button" parent="CanvasLayer/Control/Characters/Numbers/8"]
+margin_left = -3.51855
+margin_top = -2.832
+margin_right = 8.48145
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="9" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
+margin_left = 168.534
+margin_top = 112.445
+margin_right = 173.534
+margin_bottom = 120.445
+custom_fonts/font = ExtResource( 2 )
+text = "9"
+align = 1
+valign = 1
+
+[node name="9" type="Button" parent="CanvasLayer/Control/Characters/Numbers/9"]
+margin_left = -2.328
+margin_top = -2.832
+margin_right = 9.672
+margin_bottom = 11.168
+rect_scale = Vector2( 0.934, 0.812 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="Button" parent="CanvasLayer/Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_right = 64.0
+custom_styles/focus = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.819608, 0.0235294, 0, 1 )
+text = "Deletar"
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="CanvasLayer/Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -20.0
+custom_styles/focus = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.054902, 0.768627, 0, 1 )
+text = "Confirma"
+flat = true
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/A/A" to="." method="_on_A_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/B/B" to="." method="_on_B_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/C/C" to="." method="_on_C_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/D/D" to="." method="_on_D_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/E/E" to="." method="_on_E_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/F/F" to="." method="_on_F_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/G/G" to="." method="_on_G_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/H/H" to="." method="_on_H_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/I/I" to="." method="_on_I_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/J/J" to="." method="_on_J_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/K/K" to="." method="_on_K_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/L/L" to="." method="_on_L_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/M/M" to="." method="_on_M_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/N/N" to="." method="_on_N_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/O/O" to="." method="_on_O_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/P/P" to="." method="_on_P_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/Q/Q" to="." method="_on_Q_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/R/R" to="." method="_on_R_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/S/S" to="." method="_on_S_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/T/T" to="." method="_on_T_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/U/U" to="." method="_on_U_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/V/V" to="." method="_on_V_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/W/W" to="." method="_on_W_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/X/X" to="." method="_on_X_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/Y/Y" to="." method="_on_Y_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/Z/Z" to="." method="_on_Z_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/a/a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/b/b" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/c/c" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/d/d" to="." method="_on_d_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/e/e" to="." method="_on_e_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/f/f" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/g/g" to="." method="_on_g_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/h/h" to="." method="_on_h_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/i/i" to="." method="_on_i_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/j/j" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/k/k" to="." method="_on_k_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/l/l" to="." method="_on_l_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/m/m" to="." method="_on_m_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/n/n" to="." method="_on_n_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/o/o" to="." method="_on_o_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/p/p" to="." method="_on_p_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/q/q" to="." method="_on_q_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/r/r" to="." method="_on_r_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/s/s" to="." method="_on_s_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/t/t" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/u/u" to="." method="_on_u_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/v/v" to="." method="_on_v_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/w/w" to="." method="_on_w_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/x/x" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/y/y" to="." method="_on_y_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Lowercase/z/z" to="." method="_on_z_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/acento/acento" to="." method="_on_acento_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/crase/crase" to="." method="_on_crase_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/interrogacao/interrogacao" to="." method="_on_interrogacao_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/exclamacao/exclamacao" to="." method="_on_exclamacao_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/hifen/hifen" to="." method="_on_hifen_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/underline/underline" to="." method="_on_underline_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Symbols/barra/barra" to="." method="_on_barra_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/0/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/1/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/2/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/3/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/4/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/5/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/6/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/7/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/8/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Characters/Numbers/9/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

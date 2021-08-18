@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Sprites/ui/main_menu.png" type="Texture" id=1]
+[ext_resource path="res://Figures/mainmenu.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/ui/ui_volume.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ui/ui_music.png" type="Texture" id=4]
@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-start = "res://Scenes/Intro.tscn"
+start = "res://Scenes/Levels/Level01.tscn"
 howtoplay = "res://Scenes/HowToPlay.tscn"
 options = "res://Scenes/PauseMenu.tscn"
 credits = "res://Scenes/Credits.tscn"
@@ -27,15 +27,16 @@ ending = "res://Scenes/Ending.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
+scale = Vector2( 0.1875, 0.1875 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Start" type="Button" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 88.0
-margin_top = 16.0
-margin_right = 147.0
-margin_bottom = 36.0
+margin_left = 80.3969
+margin_top = 13.1591
+margin_right = 155.397
+margin_bottom = 33.1591
 custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
@@ -45,34 +46,48 @@ __meta__ = {
 [node name="HowToPlay" type="Button" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 80.0
-margin_top = 36.0
+margin_top = 30.4126
 margin_right = 160.0
-margin_bottom = 56.0
+margin_bottom = 50.4126
 custom_styles/focus = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Options" type="Button" parent="CanvasLayer"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -24.4454
-margin_top = 58.4319
-margin_right = 23.5546
-margin_bottom = 78.4319
-custom_styles/focus = SubResource( 1 )
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Credits" type="Button" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 88.0
-margin_top = 80.0
-margin_right = 152.0
-margin_bottom = 100.0
+margin_left = 86.8094
+margin_top = 64.5228
+margin_right = 150.809
+margin_bottom = 84.5228
+custom_styles/focus = SubResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Registrar" type="Button" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -32.0
+margin_top = 48.0
+margin_right = 32.0
+margin_bottom = 68.0
+custom_styles/focus = SubResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sobre" type="Button" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -33.5874
+margin_top = 81.0646
+margin_right = 30.4126
+margin_bottom = 101.065
 custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
@@ -83,9 +98,9 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -17.5
+margin_left = -32.0
 margin_top = 100.0
-margin_right = 14.5
+margin_right = 32.0
 margin_bottom = 120.0
 custom_styles/focus = SubResource( 1 )
 flat = true
@@ -94,10 +109,10 @@ __meta__ = {
 }
 
 [node name="Audio" type="Button" parent="CanvasLayer"]
-margin_left = 192.0
-margin_top = 16.0
-margin_right = 205.0
-margin_bottom = 36.0
+margin_left = 197.0
+margin_top = 17.0
+margin_right = 210.0
+margin_bottom = 37.0
 custom_styles/focus = SubResource( 2 )
 flat = true
 __meta__ = {
@@ -110,10 +125,10 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="Music" type="Button" parent="CanvasLayer"]
-margin_left = 206.0
-margin_top = 16.0
-margin_right = 220.0
-margin_bottom = 36.0
+margin_left = 212.007
+margin_top = 19.3371
+margin_right = 226.007
+margin_bottom = 39.3371
 custom_styles/focus = SubResource( 3 )
 flat = true
 __meta__ = {
@@ -121,7 +136,6 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Music"]
-position = Vector2( 0, 2 )
 texture = ExtResource( 4 )
 centered = false
 
@@ -131,8 +145,9 @@ centered = false
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/HowToPlay" to="." method="_on_HowToPlay_pressed"]
-[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Registrar" to="." method="_on_Registrar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sobre" to="." method="_on_Sobre_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Audio" to="." method="_on_Audio_pressed"]
 [connection signal="pressed" from="CanvasLayer/Music" to="." method="_on_Music_pressed"]

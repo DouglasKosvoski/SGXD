@@ -46,13 +46,17 @@ func _on_Start_pressed():
 func _on_HowToPlay_pressed():
 	next_scene = howtoplay
 	play_button_sound()
-	
-func _on_Options_pressed():
-	next_scene = options
+
+func _on_Registrar_pressed():
+	get_tree().change_scene("res://Scenes/Ranking.tscn")
 	play_button_sound()
-	
+
 func _on_Credits_pressed():
 	next_scene = credits
+	play_button_sound()
+
+func _on_Sobre_pressed():
+	get_tree().change_scene("res://Scenes/About.tscn")
 	play_button_sound()
 	
 func _on_Quit_pressed():
