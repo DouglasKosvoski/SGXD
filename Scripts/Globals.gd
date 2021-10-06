@@ -22,6 +22,7 @@ var lvl3_throws = 0
 
 var total_score = 0
 var current_level = 0
+var player_name = "Você"
 
 func _ready():
 	time_session_started = OS.get_time()

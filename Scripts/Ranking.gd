@@ -17,6 +17,7 @@ func _on_Delete_pressed():
 	$CanvasLayer/Name.text = text
 	
 func _on_Continue_pressed():
+	Globals.player_name = $CanvasLayer/Name.text
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 # Uppercase characters
