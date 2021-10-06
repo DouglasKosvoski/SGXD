@@ -15,4 +15,4 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 func _on_Exit_pressed():
-	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+	get_tree().change_scene("res://Scenes/Endgame.tscn")

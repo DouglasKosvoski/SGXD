@@ -11,6 +11,7 @@ var original_destination
 var destination
 
 func _ready():
+	$AnimatedSprite.play("walk")
 	destination = Vector2(dest_x, dest_y)
 	original_destination = destination
 	original_position = Vector2(get_global_transform()[2].x, get_global_transform()[2].y)
@@ -18,7 +19,7 @@ func _ready():
 		$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.flip_h = true
-		
+
 func _process(delta):
 	position = position.move_toward(destination, delta * SPEED)
 	if flipped:

@@ -98,6 +98,7 @@ func animation_control():
 			priority = 1
 		elif Input.is_action_pressed("ui_down") or joystick.get_value().y > joystick_trigger:
 			motion.y = max(motion.y - ACCELERATION, +MAX_SPEED)
+			anim.play("run")
 			priority = 1
 		else:
 			motion.y = lerp(motion.y, 0, FRICTION)
