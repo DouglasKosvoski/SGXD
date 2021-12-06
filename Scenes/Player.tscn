@@ -64,7 +64,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "run",
 "speed": 5.0
@@ -105,7 +105,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 40 ) ],
+"frames": [ ExtResource( 40 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
@@ -143,21 +143,20 @@ shape = SubResource( 1 )
 visible = false
 frames = SubResource( 2 )
 animation = "run"
-frame = 5
+frame = 1
 playing = true
 
 [node name="Teen" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 3 )
 animation = "run"
-frame = 3
+frame = 5
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 4 )
-animation = "magnifier"
-frame = 2
+animation = "idle"
 playing = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

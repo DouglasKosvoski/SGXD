@@ -7,8 +7,8 @@
 [ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/NPC_negacionista_nariz.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/NPC_negacionista_cabelo_amarrado.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/NPC_denier_m.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/Level03.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]

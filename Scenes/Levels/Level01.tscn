@@ -9,10 +9,10 @@
 [ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sounds/mixkit-light-rain-loop-2393.wav" type="AudioStream" id=8]
 [ext_resource path="res://Scripts/Level01.gd" type="Script" id=9]
-[ext_resource path="res://Scenes/NPC_negacionista_nariz.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/NPC_negacionista_com_mascara.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/NPC_negacionista_sem_mascara.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/NPC_negacionista_cabelo_amarrado.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/NPC_denier_stick.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/NPC_denier_m.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/NPC_denier_f.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 56 )
