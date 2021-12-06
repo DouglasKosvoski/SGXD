@@ -89,8 +89,8 @@ margin_top = -1.772
 margin_right = 9.915
 margin_bottom = 12.228
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -112,8 +112,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -135,8 +135,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,8 +158,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -181,8 +181,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -204,8 +204,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -227,8 +227,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -250,8 +250,8 @@ margin_top = -1.022
 margin_right = 9.415
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -273,8 +273,8 @@ margin_top = -1.022
 margin_right = 9.41499
 margin_bottom = 12.978
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -282,9 +282,9 @@ __meta__ = {
 
 [node name="J" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
 margin_left = 160.111
-margin_top = 53.7308
+margin_top = 51.7308
 margin_right = 165.111
-margin_bottom = 61.7308
+margin_bottom = 63.7308
 custom_fonts/font = ExtResource( 2 )
 text = "J"
 align = 1
@@ -296,8 +296,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -305,9 +305,9 @@ __meta__ = {
 
 [node name="K" type="Label" parent="CanvasLayer/Control/Characters/Uppercase"]
 margin_left = 170.357
-margin_top = 53.7308
+margin_top = 51.7308
 margin_right = 177.357
-margin_bottom = 61.7308
+margin_bottom = 63.7308
 custom_fonts/font = ExtResource( 2 )
 text = "K"
 align = 1
@@ -319,8 +319,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -342,8 +342,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -365,8 +365,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -388,8 +388,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -411,8 +411,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -434,8 +434,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -457,8 +457,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -480,8 +480,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -503,8 +503,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -526,8 +526,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -549,8 +549,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -572,8 +572,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -595,8 +595,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -618,8 +618,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -641,8 +641,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -664,8 +664,8 @@ margin_top = -2.272
 margin_right = 10.415
 margin_bottom = 11.728
 rect_scale = Vector2( 0.832, 0.802 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -673,8 +673,9 @@ __meta__ = {
 
 [node name="Lowercase" type="Control" parent="CanvasLayer/Control/Characters"]
 modulate = Color( 0.482353, 0.796078, 1, 1 )
+margin_top = 1.0
 margin_right = 42.0
-margin_bottom = 24.0
+margin_bottom = 25.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -695,8 +696,8 @@ margin_top = -1.1593
 margin_right = 9.672
 margin_bottom = 12.8407
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -718,8 +719,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -741,8 +742,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -764,8 +765,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -787,8 +788,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -810,8 +811,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -819,9 +820,9 @@ __meta__ = {
 
 [node name="g" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
 margin_left = 158.009
-margin_top = 72.9703
+margin_top = 73.9703
 margin_right = 163.009
-margin_bottom = 84.9703
+margin_bottom = 85.9703
 custom_fonts/font = ExtResource( 2 )
 text = "g"
 align = 1
@@ -833,8 +834,8 @@ margin_top = 0.942425
 margin_right = 9.22655
 margin_bottom = 14.9424
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -856,8 +857,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -865,13 +866,16 @@ __meta__ = {
 
 [node name="i" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
 margin_left = 45.6182
-margin_top = 86.7585
+margin_top = 87.7585
 margin_right = 49.6182
-margin_bottom = 98.7585
+margin_bottom = 99.7585
 custom_fonts/font = ExtResource( 2 )
 text = "i"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="i" type="Button" parent="CanvasLayer/Control/Characters/Lowercase/i"]
 margin_left = -3.51855
@@ -879,8 +883,8 @@ margin_top = -0.935873
 margin_right = 8.48145
 margin_bottom = 13.0641
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -888,9 +892,9 @@ __meta__ = {
 
 [node name="j" type="Label" parent="CanvasLayer/Control/Characters/Lowercase"]
 margin_left = 56.9422
-margin_top = 88.3459
+margin_top = 87.3459
 margin_right = 61.9422
-margin_bottom = 96.3459
+margin_bottom = 99.3459
 custom_fonts/font = ExtResource( 2 )
 text = "j"
 align = 1
@@ -902,8 +906,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -925,8 +929,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -948,8 +952,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -971,8 +975,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -994,8 +998,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1017,8 +1021,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1040,8 +1044,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1063,8 +1067,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1086,8 +1090,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1109,8 +1113,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1132,8 +1136,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1155,8 +1159,8 @@ margin_top = -1.928
 margin_right = 9.672
 margin_bottom = 12.072
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1178,8 +1182,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1201,8 +1205,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1224,8 +1228,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1247,8 +1251,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1270,8 +1274,8 @@ margin_top = -1.953
 margin_right = 9.672
 margin_bottom = 12.047
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1279,8 +1283,9 @@ __meta__ = {
 
 [node name="Symbols" type="Control" parent="CanvasLayer/Control/Characters"]
 modulate = Color( 0.231373, 1, 0.764706, 1 )
+margin_top = 1.0
 margin_right = 42.0
-margin_bottom = 29.0
+margin_bottom = 30.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1304,8 +1309,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1330,8 +1335,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1353,8 +1358,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1376,8 +1381,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1399,8 +1404,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1408,9 +1413,9 @@ __meta__ = {
 
 [node name="underline" type="Label" parent="CanvasLayer/Control/Characters/Symbols"]
 margin_left = 167.442
-margin_top = 100.874
+margin_top = 98.874
 margin_right = 172.442
-margin_bottom = 108.874
+margin_bottom = 110.874
 custom_fonts/font = ExtResource( 2 )
 text = "_"
 align = 1
@@ -1425,8 +1430,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1451,8 +1456,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1485,8 +1490,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1508,8 +1513,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1531,8 +1536,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1554,8 +1559,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1577,8 +1582,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1600,8 +1605,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1623,8 +1628,8 @@ margin_top = -2.832
 margin_right = 9.22655
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1646,8 +1651,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1655,13 +1660,16 @@ __meta__ = {
 
 [node name="8" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
 margin_left = 157.21
-margin_top = 112.445
+margin_top = 113.445
 margin_right = 162.21
-margin_bottom = 120.445
+margin_bottom = 125.445
 custom_fonts/font = ExtResource( 2 )
 text = "8"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="8" type="Button" parent="CanvasLayer/Control/Characters/Numbers/8"]
 margin_left = -3.51855
@@ -1669,8 +1677,8 @@ margin_top = -2.832
 margin_right = 8.48145
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1678,9 +1686,9 @@ __meta__ = {
 
 [node name="9" type="Label" parent="CanvasLayer/Control/Characters/Numbers"]
 margin_left = 168.534
-margin_top = 112.445
+margin_top = 113.445
 margin_right = 173.534
-margin_bottom = 120.445
+margin_bottom = 125.445
 custom_fonts/font = ExtResource( 2 )
 text = "9"
 align = 1
@@ -1692,8 +1700,8 @@ margin_top = -2.832
 margin_right = 9.672
 margin_bottom = 11.168
 rect_scale = Vector2( 0.934, 0.812 )
-custom_styles/focus = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1704,9 +1712,9 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -20.0
 margin_right = 64.0
-custom_styles/focus = SubResource( 2 )
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.819608, 0.0235294, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 2 )
 text = "Deletar"
 flat = true
 __meta__ = {
@@ -1721,10 +1729,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -64.0
 margin_top = -20.0
-custom_styles/focus = SubResource( 2 )
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.054902, 0.768627, 0, 1 )
-text = "Confirma"
+custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 2 )
+text = "Confirmar"
 flat = true
 __meta__ = {
 "_edit_lock_": true,

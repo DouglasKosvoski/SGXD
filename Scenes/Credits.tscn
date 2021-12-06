@@ -65,8 +65,8 @@ margin_left = 0.561234
 margin_top = -61.3894
 margin_right = 238.561
 margin_bottom = -5.38939
-custom_fonts/font = ExtResource( 3 )
 custom_constants/line_spacing = 16
+custom_fonts/font = ExtResource( 3 )
 text = "Creditos"
 align = 1
 valign = 1
@@ -80,8 +80,8 @@ margin_left = 0.561234
 margin_top = -0.561234
 margin_right = 112.561
 margin_bottom = 55.4388
-custom_fonts/font = ExtResource( 3 )
 custom_constants/line_spacing = 16
+custom_fonts/font = ExtResource( 3 )
 text = "Planejamento
 Programação
 Arte"
@@ -98,8 +98,8 @@ anchor_bottom = 1.0
 margin_left = 128.0
 margin_right = 239.0
 margin_bottom = 56.0
-custom_fonts/font = ExtResource( 3 )
 custom_constants/line_spacing = 16
+custom_fonts/font = ExtResource( 3 )
 text = "Ana Bourscheid
 Douglas Kosvoski
 Lucas J. Lopes"
@@ -118,8 +118,8 @@ margin_left = 64.0
 margin_top = 88.0
 margin_right = 184.0
 margin_bottom = 144.0
-custom_fonts/font = ExtResource( 3 )
 custom_constants/line_spacing = 16
+custom_fonts/font = ExtResource( 3 )
 text = "Obrigado por Participar"
 align = 1
 valign = 1

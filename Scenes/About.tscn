@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/About.gd" type="Script" id=2]
-[ext_resource path="res://Figures/about.jpeg" type="Texture" id=4]
+[ext_resource path="res://Addons/new_theme.tres" type="Theme" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -13,25 +13,34 @@ next_scene = "res://Scenes/MainMenu.tscn"
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 240.0
 margin_bottom = 136.0
-color = Color( 0.227451, 0.227451, 0.227451, 1 )
+color = Color( 0, 0.509804, 0.788235, 1 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite2" type="Sprite" parent="."]
-scale = Vector2( 0.1875, 0.185793 )
-texture = ExtResource( 4 )
-centered = false
 
 [node name="Label" type="Label" parent="."]
 margin_left = 88.0
 margin_top = 112.0
 margin_right = 152.0
 margin_bottom = 128.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.501961, 1, 0.462745, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "Continuar"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 240.0
+margin_bottom = 136.0
+theme = ExtResource( 3 )
+text = "Este jogo consiste em um purposeful game e integra a tese desenvolvida no curso de doutorado do Programa de Pós-Graduação em Comunicação Social - PPGCOM/PUCRS e orientada pelo professor doutor André Fagundes Pase."
 align = 1
 valign = 1
 autowrap = true
