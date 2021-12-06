@@ -151,7 +151,7 @@ func level_complete():
 		get_tree().change_scene("res://Scenes/Levels/Level03.tscn")
 	elif current_level == 3:
 		Globals.lvl3_time_conclusion = OS.get_time()
-		get_tree().change_scene("res://Scenes/Credits.tscn")
+		get_tree().change_scene("res://Scenes/Credits2.tscn")
 
 func magnifier_glass():
 	priority = 3

@@ -27,12 +27,12 @@ margin_bottom = 131.0
 flat = true
 
 [node name="score" type="Label" parent="."]
-margin_left = 65.0
-margin_top = 44.0
-margin_right = 125.0
-margin_bottom = 130.0
+margin_left = 73.0
+margin_top = 48.0
+margin_right = 133.0
+margin_bottom = 134.0
 theme = ExtResource( 4 )
-custom_constants/line_spacing = 5
+custom_constants/line_spacing = 6
 custom_fonts/font = ExtResource( 3 )
 text = "90000
 80000
@@ -45,12 +45,12 @@ __meta__ = {
 }
 
 [node name="name" type="Label" parent="."]
-margin_left = 125.0
-margin_top = 44.0
-margin_right = 194.0
-margin_bottom = 130.0
+margin_left = 127.0
+margin_top = 48.0
+margin_right = 196.0
+margin_bottom = 134.0
 theme = ExtResource( 4 )
-custom_constants/line_spacing = 5
+custom_constants/line_spacing = 6
 custom_fonts/font = ExtResource( 3 )
 text = " Gotinha
  Ana
@@ -63,12 +63,12 @@ __meta__ = {
 }
 
 [node name="index" type="Label" parent="."]
-margin_left = 47.0
-margin_top = 44.0
-margin_right = 65.0
-margin_bottom = 130.0
+margin_left = 49.0
+margin_top = 46.0
+margin_right = 67.0
+margin_bottom = 132.0
 theme = ExtResource( 4 )
-custom_constants/line_spacing = 5
+custom_constants/line_spacing = 6
 custom_fonts/font = ExtResource( 3 )
 text = "1.
 2.

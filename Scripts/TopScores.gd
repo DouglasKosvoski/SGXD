@@ -13,7 +13,7 @@ func _ready():
 	$score.text = ""
 	$name.text = ""
 	print($name.theme.get_constant_list("Line spacing"))
-	$name.set_constant( String, String, 6)
+
 	var i = 0
 	while i < len(scores):
 		if player_score_assigned == false and Globals.total_score >= scores[i]:

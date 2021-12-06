@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/buttons/button_caderneta.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/ui/booklet_blank.png" type="Texture" id=3]
 [ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Sprites/ui/ui_close_button.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/ui/back_button.png" type="Texture" id=5]
 
 [node name="Caderneta" type="Node2D"]
 pause_mode = 2
@@ -27,7 +27,7 @@ __meta__ = {
 }
 
 [node name="qtd_vaccines" type="Node2D" parent="Node2D"]
-position = Vector2( 120, 68.25 )
+position = Vector2( 120, 65.25 )
 scale = Vector2( 1, 1.0037 )
 
 [node name="qtd_coletadas" type="Label" parent="Node2D/qtd_vaccines"]
@@ -46,9 +46,9 @@ __meta__ = {
 
 [node name="qtd_divisor" type="Label" parent="Node2D/qtd_vaccines"]
 margin_left = 88.0
-margin_top = 42.0
+margin_top = 42.9963
 margin_right = 114.0
-margin_bottom = 50.0
+margin_bottom = 54.9963
 custom_fonts/font = ExtResource( 4 )
 text = "/"
 align = 1
@@ -261,8 +261,8 @@ __meta__ = {
 [node name="Vaccines_holder" type="Node2D" parent="Node2D"]
 
 [node name="Return_Button" type="TouchScreenButton" parent="Node2D"]
-position = Vector2( 8, 8 )
-scale = Vector2( 0.50562, 0.5 )
+position = Vector2( 31, 9 )
+scale = Vector2( -0.17, 0.16 )
 normal = ExtResource( 5 )
 
 [connection signal="pressed" from="Icon" to="." method="_on_CadernetaButton_pressed"]

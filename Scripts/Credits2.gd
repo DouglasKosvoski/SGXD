@@ -12,7 +12,7 @@ func _ready():
 		
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "ScrollUp":
-		get_tree().change_scene("res://Scenes/Endgame.tscn")
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 func _on_Exit_pressed():
-	get_tree().change_scene("res://Scenes/Endgame.tscn")
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
