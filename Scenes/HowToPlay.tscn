@@ -43,5 +43,8 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="finished" from="BackgroundMusic" to="." method="_on_BackgroundMusic_finished"]

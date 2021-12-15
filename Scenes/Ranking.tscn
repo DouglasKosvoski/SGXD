@@ -1742,6 +1742,9 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/A/A" to="." method="_on_A_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/B/B" to="." method="_on_B_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Characters/Uppercase/C/C" to="." method="_on_C_pressed"]
@@ -1814,3 +1817,4 @@ autoplay = true
 [connection signal="pressed" from="CanvasLayer/Control/Delete" to="." method="_on_Delete_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="finished" from="BackgroundMusic" to="." method="_on_BackgroundMusic_finished"]

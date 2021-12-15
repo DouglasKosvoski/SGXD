@@ -81,8 +81,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Menu principal" to="." method="_on_Menu_principal_pressed"]
 [connection signal="pressed" from="Avaliar" to="." method="_on_Avaliar_pressed"]
 [connection signal="pressed" from="Melhores tempos" to="." method="_on_Melhores_tempos_pressed"]
 [connection signal="pressed" from="Conheca as vacinas" to="." method="_on_Conheca_as_vacinas_pressed"]
 [connection signal="pressed" from="Jogar novamente" to="." method="_on_Jogar_novamente_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

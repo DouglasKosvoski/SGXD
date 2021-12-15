@@ -17,6 +17,7 @@ var credits_music = preload("res://Sounds/Credits.wav")
 var level1_music = preload("res://Sounds/Level_1_Background.wav")
 var level2_music = preload("res://Sounds/Level_2_Background.wav")
 var level3_music = preload("res://Sounds/Level_3_Background.wav")
+var ending_music = preload("res://Sounds/Ending.wav")
 
 var button_sfx = preload("res://Sounds/Button_Pressed.wav")
 var vaccine_collected_sfx = preload("res://Sounds/Collect.wav")

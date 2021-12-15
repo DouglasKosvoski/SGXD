@@ -2,14 +2,27 @@ extends Control
 
 export(String, FILE, "*.tscn") var next_scene
 
+func _on_Button_pressed():
+	get_tree().change_scene(next_scene)
+
 func _ready():
+	if AudioManager.sound_on:
+		$BackgroundMusic.volume_db = AudioManager.sound_volume
+	else:
+		$BackgroundMusic.volume_db = AudioManager.MIN_VOLUME_LEVEL
+	$BackgroundMusic.stream = AudioManager.main_menu_music
+	$BackgroundMusic.play()
+
 	$AudioStreamPlayer.stream = AudioManager.ranking_sfx
 	$AudioStreamPlayer.play()
 	$CanvasLayer/Name.add_font_override("font", load("res://Addons/game_font.tres"))
-
+	
 func _on_AudioStreamPlayer_finished():
 	if $AudioStreamPlayer.stream == AudioManager.button_sfx:
 		get_tree().change_scene(next_scene)
+
+func _on_BackgroundMusic_finished():
+	$BackgroundMusic.play()
 
 func _on_Delete_pressed():
 	var text = $CanvasLayer/Name.text
