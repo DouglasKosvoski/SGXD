@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Level_2_Background.wav-f70bbb5a411daa366e0ab007ad55f87b.sample"
+
+[deps]
+
+source_file="res://Sounds/Level_2_Background.wav"
+dest_files=[ "res://.import/Level_2_Background.wav-f70bbb5a411daa366e0ab007ad55f87b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

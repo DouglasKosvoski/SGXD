@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/NPC_denier.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Level02.gd" type="Script" id=12]
+[ext_resource path="res://Sounds/New Folder/Level_2_Background.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 56 )
@@ -100,6 +101,7 @@ scale = Vector2( 35, 0.5 )
 segundos = 60
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 2 )]
 margin_left = 600.0
@@ -150,4 +152,5 @@ position = Vector2( 1608, 112 )
 position = Vector2( -8, 32 )
 shape = SubResource( 1 )
 
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

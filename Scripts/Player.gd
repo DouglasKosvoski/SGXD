@@ -46,7 +46,6 @@ func _ready():
 
 func _physics_process(delta):
 	animation_control()
-	play_sounds()
 	motion = move_and_slide(motion)
 
 # get the correct set of animations, dependant on level index
@@ -114,11 +113,6 @@ func take_damage():
 	anim.play("hurt")
 	if anim.animation == "hurt" && anim.frame == anim.frames.get_frame_count("hurt")-1:
 		priority = 0
-
-func play_sounds():
-	if anim.animation == "run" and anim.frame == anim.frames.get_frame_count("run")-1:
-		$AudioStreamPlayer.stream = AudioManager.player_footsteps_sfx
-#		$AudioStreamPlayer.play(0.0)
 
 # check which direction the player is moving
 func flip_animation():

@@ -12,15 +12,17 @@ var audio_on = true
 var sound_volume = 0 # music related
 var audio_volume = 0 # sfx related
 
-var main_menu_music = preload("res://Sounds/mixkit-marimba-ringtone-1359.wav")
-var credits_music = preload("res://Sounds/mixkit-orchestral-christmas-happy-music-2987.wav")
-var level1_music = preload("res://Sounds/mixkit-light-rain-loop-2393.wav")
+var main_menu_music = preload("res://Sounds/Main_Menu.wav")
+var credits_music = preload("res://Sounds/Credits.wav")
+var level1_music = preload("res://Sounds/Level_1_Background.wav")
+var level2_music = preload("res://Sounds/Level_2_Background.wav")
+var level3_music = preload("res://Sounds/Level_3_Background.wav")
 
-var button_sfx = preload("res://Sounds/mixkit-electronic-lock-success-beeps-2852.wav")
-var vaccine_collected_sfx = preload("res://Sounds/mixkit-arcade-game-jump-coin-216.wav")
-var timer_countdown_sfx = preload("res://Sounds/mixkit-tick-tock-clock-timer-1045.wav")
-var opening_sfx = preload("res://Sounds/mixkit-arcade-bonus-alert-767.wav")
-var ranking_sfx = preload("res://Sounds/mixkit-unlock-game-notification-253.wav")
-var player_footsteps_sfx = preload("res://Sounds/mixkit_footsteps.wav")
-var player_scan_sfx = null
-var player_throw_sfx = null
+var button_sfx = preload("res://Sounds/Button_Pressed.wav")
+var vaccine_collected_sfx = preload("res://Sounds/Collect.wav")
+var timer_countdown_sfx = preload("res://Sounds/Timer.wav")
+var opening_sfx = preload("res://Sounds/Startup.wav")
+var ranking_sfx = preload("res://Sounds/Notification.wav")
+
+#var player_scan_sfx = null
+#var player_throw_sfx = null

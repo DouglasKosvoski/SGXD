@@ -5,7 +5,7 @@ var running = true
 
 func _ready():
 	$AudioStreamPlayer.stream = AudioManager.timer_countdown_sfx
-	$AudioStreamPlayer.play(0.0)
+#	$AudioStreamPlayer.play(0.0)
 	
 	if AudioManager.sound_on:
 		$AudioStreamPlayer.volume_db = AudioManager.sound_volume
