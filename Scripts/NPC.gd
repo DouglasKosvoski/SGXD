@@ -3,6 +3,7 @@ extends Node2D
 export(int) var dest_x
 export(int) var dest_y
 export(bool) var flipped
+export(bool) var robot = false
 
 const SPEED = 25
 var motion = Vector2()
@@ -40,6 +41,13 @@ func _process(delta):
 			destination = original_position
 			
 func _on_NPC_Area2D_body_entered(body):
-	print("NPC:", body.name)
 	if body.name == "Player":
 		body.hurt()
+	else:
+		print("Npc detectou: ", body)
+
+func asd():
+	print("asd")
+
+#Se for robot
+#no scan transforma em robo

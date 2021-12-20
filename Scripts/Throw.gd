@@ -4,8 +4,10 @@ var selected = false
 var start_position
 var dropped_position
 const RETURN_SPEED = 15
-const THRESHOLD = 13
+const THRESHOLD = 1
 const RADIUS = 13
+var lupa = preload("res://Sprites/Itens/magnifier.png")
+var botao = preload("res://Sprites/buttons/button_lupa.png")
 
 func _ready():
 	global_position.x += RADIUS
@@ -20,6 +22,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _physics_process(delta):
 	if selected:
 		if get_global_mouse_position().distance_to(start_position) > THRESHOLD:
+			$Sprite.set_texture(lupa)
 			global_position = lerp(global_position, get_global_mouse_position(), RETURN_SPEED*delta)
 	else:
 		global_position = lerp(global_position, start_position, RETURN_SPEED*delta)
@@ -35,7 +38,11 @@ func _input(event):
 				else:
 					get_parent().get_parent().get_node(".").magnifier_glass()
 			selected = false
-			
+			$Sprite.set_texture(botao)
 
-func _on_Area2D_body_entered(body):
-	print("Name: ", body.name)
+func _on_Area2D_area_entered(area):
+	if area.name == "NPC_area":
+		print("12123123")
+#		area.get_parent().asd()
+	else:
+		print("Lupa detectou: ", area)

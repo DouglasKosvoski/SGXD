@@ -13,7 +13,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 main_menu = "res://Scenes/MainMenu.tscn"
-link_avaliar = "www.google.com"
 top_score = "res://Scenes/TopScores.tscn"
 play_again = "res://Scenes/Levels/Level01.tscn"
 vaccines = "res://Scenes/KnowVaccines.tscn"

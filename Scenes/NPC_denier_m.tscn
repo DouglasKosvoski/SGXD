@@ -25,12 +25,11 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "walk"
-frame = 5
 playing = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="NPC_area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_area"]
 shape = SubResource( 2 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_NPC_Area2D_body_entered"]
+[connection signal="body_entered" from="NPC_area" to="." method="_on_NPC_Area2D_body_entered"]

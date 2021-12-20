@@ -82,24 +82,24 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 28 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "magnifier",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 44 ) ],
 "loop": true,
-"name": "hurt",
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 } ]
 
@@ -110,24 +110,24 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 29 ), ExtResource( 25 ), ExtResource( 52 ), ExtResource( 53 ) ],
 "loop": true,
 "name": "magnifier",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "hurt",
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 } ]
 
@@ -143,14 +143,14 @@ shape = SubResource( 1 )
 visible = false
 frames = SubResource( 2 )
 animation = "run"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Teen" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 3 )
 animation = "run"
-frame = 5
+frame = 1
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]

@@ -7,9 +7,6 @@ var moving = false
 const return_accel = 10
 const threshold = 5
 
-func _ready():
-	print(" ORI: ",original_pos, " POS: ",position, " TRA: ",transform)
-
 func _physics_process(delta):
 	if moving == false:
 		if position != original_pos:

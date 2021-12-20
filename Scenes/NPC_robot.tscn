@@ -12,14 +12,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ) ],
 "loop": false,
 "name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -34,9 +34,9 @@ frames = SubResource( 1 )
 animation = "die"
 frame = 3
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="NPC_area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_area"]
 shape = SubResource( 2 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_NPC_Area2D_body_entered"]
+[connection signal="body_entered" from="NPC_area" to="." method="_on_NPC_Area2D_body_entered"]
