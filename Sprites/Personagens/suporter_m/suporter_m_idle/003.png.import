@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/003.png-304a8fa4d719124a68220690ef3052aa.stex"
+path="res://.import/003.png-56326295854ba06e211602a0745c524b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personagens/denier_m/denier_m_idle/003.png"
-dest_files=[ "res://.import/003.png-304a8fa4d719124a68220690ef3052aa.stex" ]
+source_file="res://Sprites/Personagens/suporter_m/suporter_m_idle/003.png"
+dest_files=[ "res://.import/003.png-56326295854ba06e211602a0745c524b.stex" ]
 
 [params]
 
