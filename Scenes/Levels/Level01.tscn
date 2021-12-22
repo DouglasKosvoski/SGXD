@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/map/map1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/NPC_denier_m.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/NPC_denier_f.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/NPC_denier.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47, 53 )
@@ -197,38 +198,77 @@ return_to = "Level"
 
 [node name="Npcs" type="Node2D" parent="."]
 
-[node name="NPC" parent="Npcs" instance=ExtResource( 10 )]
-position = Vector2( 104, 145 )
-dest_x = 248
+[node name="NPC1" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 1328, 104 )
+dest_x = 1392
+dest_y = 168
+flipped = true
+
+[node name="NPC8" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 1040, 136 )
+dest_x = 1216
+dest_y = 136
+flipped = true
+
+[node name="NPC12" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 104, 160 )
+dest_x = 256
+dest_y = 160
+flipped = true
+
+[node name="NPC11" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 1264, 80 )
+dest_x = 1152
+dest_y = 80
+
+[node name="NPC2" parent="Npcs" instance=ExtResource( 15 )]
+position = Vector2( 384, 144 )
+dest_x = 280
 dest_y = 144
-flipped = true
 
-[node name="NPC2" parent="Npcs" instance=ExtResource( 11 )]
-position = Vector2( 240, 152 )
-dest_x = 80
-dest_y = 152
-
-[node name="NPC3" parent="Npcs" instance=ExtResource( 12 )]
-position = Vector2( 208, 120 )
-dest_x = 72
+[node name="NPC3" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 1416, 120 )
+dest_x = 1464
 dest_y = 120
-
-[node name="NPC4" parent="Npcs" instance=ExtResource( 13 )]
-position = Vector2( 168, 176 )
-dest_x = 304
-dest_y = 176
-flipped = true
-
-[node name="NPC5" parent="Npcs" instance=ExtResource( 13 )]
-position = Vector2( 432, 96 )
-dest_x = 512
-dest_y = 176
 flipped = true
 
 [node name="NPC6" parent="Npcs" instance=ExtResource( 13 )]
-position = Vector2( 736, 176 )
-dest_x = 656
-dest_y = 96
+position = Vector2( 1184, 176 )
+dest_x = 1112
+dest_y = 104
+
+[node name="NPC7" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 848, 72 )
+dest_x = 1096
+dest_y = 72
+flipped = true
+
+[node name="NPC9" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 1104, 88 )
+dest_x = 848
+dest_y = 88
+
+[node name="NPC4" parent="Npcs" instance=ExtResource( 12 )]
+position = Vector2( 440, 104 )
+dest_x = 504
+dest_y = 168
+flipped = true
+
+[node name="NPC10" parent="Npcs" instance=ExtResource( 12 )]
+position = Vector2( 968, 160 )
+dest_x = 816
+dest_y = 160
+
+[node name="NPC13" parent="Npcs" instance=ExtResource( 12 )]
+position = Vector2( 1408, 160 )
+dest_x = 1352
+dest_y = 104
+
+[node name="NPC5" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 576, 136 )
+dest_x = 760
+dest_y = 136
+flipped = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1608, 112 )

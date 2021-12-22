@@ -34,8 +34,8 @@ func _ready():
 	MAX_SPEED = MAX_SPEED + (MAX_SPEED * (GAIN * current_level))
 	ACCELERATION = MAX_SPEED / 10
 	
-	if current_level == 1:
-		$CanvasLayer/Throw.visible = false
+#	if current_level == 1:
+#		$CanvasLayer/Throw.visible = false
 	
 	if AudioManager.sound_on:
 		$AudioStreamPlayer.volume_db = AudioManager.sound_volume

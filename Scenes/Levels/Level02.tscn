@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/map/map2.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=2]
@@ -8,7 +8,11 @@
 [ext_resource path="res://Scenes/Boundaries.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NPC_denier_stick.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/NPC_denier_m.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/NPC_denier.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Level02.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/NPC_denier_f.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 56 )
@@ -169,6 +173,10 @@ rotation = 0.79874
 position = Vector2( 1522, 204 )
 rotation = 0.79874
 
+[node name="StaticBody2D13" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 1508, 103 )
+rotation = 1.57079
+
 [node name="Timer" parent="." instance=ExtResource( 5 )]
 segundos = 60
 
@@ -183,11 +191,61 @@ return_to = "Level"
 
 [node name="Npcs" type="Node2D" parent="."]
 
-[node name="NPC" parent="Npcs" instance=ExtResource( 8 )]
-position = Vector2( 128, 128 )
-dest_x = 250
+[node name="NPC" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 304, 128 )
+dest_x = 96
 dest_y = 128
+
+[node name="NPC8" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 1080, 128 )
+dest_x = 872
+dest_y = 128
+
+[node name="NPC6" parent="Npcs" instance=ExtResource( 11 )]
+position = Vector2( 1336, 104 )
+dest_x = 1400
+dest_y = 168
 flipped = true
+
+[node name="NPC2" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 392, 152 )
+dest_x = 576
+dest_y = 152
+flipped = true
+
+[node name="NPC7" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 656, 88 )
+dest_x = 800
+dest_y = 88
+flipped = true
+
+[node name="NPC5" parent="Npcs" instance=ExtResource( 10 )]
+position = Vector2( 1400, 112 )
+dest_x = 1464
+dest_y = 112
+flipped = true
+
+[node name="NPC3" parent="Npcs" instance=ExtResource( 13 )]
+position = Vector2( 664, 104 )
+dest_x = 736
+dest_y = 176
+flipped = true
+
+[node name="NPC4" parent="Npcs" instance=ExtResource( 9 )]
+position = Vector2( 512, 168 )
+dest_x = 448
+dest_y = 104
+
+[node name="NPC_denier_stick" parent="Npcs" instance=ExtResource( 8 )]
+position = Vector2( 112, 160 )
+dest_x = 288
+dest_y = 160
+flipped = true
+
+[node name="NPC_denier_stick2" parent="Npcs" instance=ExtResource( 8 )]
+position = Vector2( 1184, 176 )
+dest_x = 1112
+dest_y = 104
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1608, 112 )

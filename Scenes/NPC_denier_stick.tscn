@@ -41,13 +41,13 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.56819, 13.0158 )
 
-[node name="Node2D" type="Node2D"]
+[node name="NPC_denier_stick" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "walk"
-frame = 5
+frame = 1
 playing = true
 
 [node name="AnimatedSprite_Robot" type="AnimatedSprite" parent="."]
