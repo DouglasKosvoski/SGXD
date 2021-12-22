@@ -1,5 +1,6 @@
 extends Node
 
+var time_start
 var time_session_started
 var lvl1_time_conclusion
 var lvl2_time_conclusion
@@ -28,6 +29,7 @@ const form_link = "www.google.com"
 
 func _ready():
 	time_session_started = OS.get_time()
+	time_start = OS.get_unix_time()
 	
 	for i in range(lvl1_qtd_vaccines):
 		lvl1_collected_vaccines.append(0)

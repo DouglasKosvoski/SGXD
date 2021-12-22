@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Figures/figura 21.png" type="Texture" id=1]
+[ext_resource path="res://Figures/figura 25.png" type="Texture" id=2]
+[ext_resource path="res://Addons/game_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scripts/Final_Result.gd" type="Script" id=5]
+
+[node name="Final_Result" type="Node2D"]
+script = ExtResource( 5 )
+next_scene = "res://Scenes/Credits2.tscn"
+
+[node name="estatistica" type="Node2D" parent="."]
+
+[node name="Fundo" type="Sprite" parent="estatistica"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Tempo total" type="Label" parent="estatistica"]
+margin_left = 26.0
+margin_top = 70.0
+margin_right = 66.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 4 )
+text = "12:12:31"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vacinas Coletadas" type="Label" parent="estatistica"]
+margin_left = 96.0
+margin_top = 70.0
+margin_right = 136.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 4 )
+text = "12/20"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Verificacoes Realizadas" type="Label" parent="estatistica"]
+margin_left = 167.0
+margin_top = 70.0
+margin_right = 207.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 4 )
+text = "5/8"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="msg" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="msg"]
+margin_right = 240.0
+margin_bottom = 135.0
+color = Color( 0.203922, 0.235294, 0.392157, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="msg"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 224.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 4 )
+text = "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="figura" type="Node2D" parent="."]
+visible = false
+
+[node name="Fundo" type="Sprite" parent="figura"]
+scale = Vector2( 0.1, 0.100741 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

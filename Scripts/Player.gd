@@ -140,7 +140,7 @@ func flip_animation():
 func collected(vacine_name):
 	# update number of vaccines collected
 	vacine_counter += 1
-	Globals.total_score += 500
+	Globals.total_score += 3000
 	if Globals.current_level == 1:
 		Globals.lvl1_collected_vaccines[int(vacine_name)] = 1
 	elif Globals.current_level == 2:
@@ -160,7 +160,7 @@ func level_complete():
 		get_tree().change_scene("res://Scenes/Levels/Level03.tscn")
 	elif current_level == 3:
 		Globals.lvl3_time_conclusion = OS.get_time()
-		get_tree().change_scene("res://Scenes/Credits2.tscn")
+		get_tree().change_scene("res://Scenes/Final_Result.tscn")
 
 func magnifier_glass():
 	priority = 3
@@ -174,7 +174,7 @@ func throw():
 
 	if anim.animation == "throw" && anim.frame == anim.frames.get_frame_count("throw")-1:
 		priority = 0
-		spawnShoot()
+#		spawnShoot()
 
 func spawnShoot():
 	var flagPrev = Vector2()

@@ -102,16 +102,6 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 47 ) ],
-"loop": true,
-"name": "thrrow",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 34 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "magnifier",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "hurt",
@@ -121,6 +111,16 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "thrrow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "magnifier",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=3]
@@ -128,11 +128,6 @@ animations = [ {
 "frames": [ ExtResource( 39 ), ExtResource( 55 ), ExtResource( 31 ), ExtResource( 37 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 59 ), ExtResource( 66 ), ExtResource( 60 ), ExtResource( 58 ) ],
-"loop": true,
-"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -149,6 +144,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 66 ), ExtResource( 60 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "magnifier",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=7]
@@ -156,11 +156,6 @@ animations = [ {
 "frames": [ ExtResource( 40 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 25 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -177,6 +172,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 25 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "magnifier",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=4]
@@ -184,11 +184,6 @@ animations = [ {
 "frames": [ ExtResource( 73 ), ExtResource( 72 ), ExtResource( 33 ), ExtResource( 71 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 70 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 38 ) ],
-"loop": true,
-"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -205,6 +200,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 70 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "magnifier",
+"speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
@@ -218,21 +218,21 @@ shape = SubResource( 5 )
 visible = false
 frames = SubResource( 2 )
 animation = "run"
-frame = 5
+frame = 1
 playing = true
 
 [node name="Teen" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 6 )
 animation = "run"
-frame = 2
+frame = 4
 playing = true
 
 [node name="Teen_Sick" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 3 )
 animation = "run"
-frame = 3
+frame = 5
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
