@@ -40,6 +40,7 @@ current_level = 1
 [node name="Camera2D" parent="Player" instance=ExtResource( 4 )]
 limit_right = 1645
 limit_bottom = 200
+smoothing_enabled = false
 editor_draw_limits = true
 
 [node name="Vaccines" type="Node2D" parent="."]

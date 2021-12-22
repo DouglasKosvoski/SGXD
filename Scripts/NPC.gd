@@ -10,6 +10,7 @@ var motion = Vector2()
 var original_position
 var original_destination
 var destination
+var scanned = false
 
 func _ready():
 	$AnimatedSprite.play("walk")
@@ -43,18 +44,18 @@ func _process(delta):
 func _on_NPC_Area2D_body_entered(body):
 	if body.name == "Player":
 		body.hurt()
-	else:
-		print("Npc detectou bb: ", body)
 
 func scan():
-	if robot:
+	if robot && !scanned:
+		scanned = true
+		Globals.total_scans += 1
 		$AnimatedSprite.visible = false
 		$AnimatedSprite_Robot.visible = true
 		$AnimatedSprite_Robot.play("die")
 		$AnimatedSprite_Robot.flip_h = $AnimatedSprite.flip_h
 		SPEED = 0
-	else:
+	elif !robot:
 		$Verified.visible = true
-
-func _on_NPC_area_area_entered(area):
-	print("Npc detectou aa: ", area, area.name)
+#
+#func _on_NPC_area_area_entered(area):
+#	print("Npc detectou aa: ", area, area.name)

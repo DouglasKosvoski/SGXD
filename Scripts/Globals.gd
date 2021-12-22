@@ -15,8 +15,9 @@ var lvl1_collected_vaccines = []
 var lvl2_collected_vaccines = []
 var lvl3_collected_vaccines = []
 
-var lvl2_scans = 0
-var lvl3_scans = 0
+
+var total_scans = 0
+var scans_avaiables = 7
 
 var lvl2_throws = 0
 var lvl3_throws = 0

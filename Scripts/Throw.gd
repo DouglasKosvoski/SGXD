@@ -6,42 +6,36 @@ var dropped_position
 const RETURN_SPEED = 15
 const THRESHOLD = 10
 const RADIUS = 13
+
 var lupa = preload("res://Sprites/Itens/magnifier.png")
 var botao = preload("res://Sprites/buttons/button_lupa.png")
 
 func _ready():
-	global_position.x += RADIUS
-	global_position.y += RADIUS
-	start_position = Vector2(global_position.x, global_position.y)
-	dropped_position = start_position
-	
+	update_pos()
 
 func _physics_process(delta):
+	update_pos()
 	if selected:
-		if get_global_mouse_position().distance_to(start_position) > THRESHOLD:
+		if get_global_mouse_position().distance_to(global_position) > THRESHOLD:
 			$Sprite.set_texture(lupa)
-			global_position = lerp(global_position, get_global_mouse_position(), RETURN_SPEED*delta)
-	else:
-		global_position = lerp(global_position, start_position, RETURN_SPEED*delta)
-		
+			global_position = get_global_mouse_position()
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed:
-			dropped_position = global_position
-
 			if selected:
-				if dropped_position.distance_to(start_position) < THRESHOLD:
-					get_parent().get_node(".").throw()
-				else:
-					get_parent().get_node(".").magnifier_glass()
+				get_parent().get_node(".").magnifier_glass()
 			selected = false
 			$Sprite.set_texture(botao)
 
 func _on_botao_area_entered(area):
-	if area.name == "NPC_area":
+	if area.name == "NPC_area" && selected:
 		area.get_parent().scan()
-	print("Lupa detectou aa: ", area.name)
 
 func _on_botao_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
 		selected = true
+
+func update_pos():
+	global_position.x = max(get_parent().global_position.x + RADIUS + 88, 220)
+	global_position.y = min(get_parent().global_position.y + RADIUS + 5, 150)

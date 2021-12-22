@@ -40,6 +40,7 @@ current_level = 3
 [node name="Camera2D" parent="Player" instance=ExtResource( 2 )]
 limit_right = 1645
 limit_bottom = 200
+smoothing_enabled = false
 editor_draw_limits = true
 
 [node name="Vaccines" type="Node2D" parent="."]
@@ -186,16 +187,19 @@ return_to = "Level"
 position = Vector2( 840, 80 )
 dest_x = 664
 dest_y = 80
+robot = true
 
 [node name="NPC2" parent="Npcs" instance=ExtResource( 8 )]
 position = Vector2( 880, 144 )
 dest_x = 816
 dest_y = 144
+robot = true
 
 [node name="NPC3" parent="Npcs" instance=ExtResource( 11 )]
 position = Vector2( 584, 88 )
 dest_x = 496
 dest_y = 88
+robot = true
 
 [node name="NPC4" parent="Npcs" instance=ExtResource( 9 )]
 position = Vector2( 512, 176 )

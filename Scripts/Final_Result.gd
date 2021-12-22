@@ -1,6 +1,8 @@
 extends Node2D
 
 var counter = 0
+var tds_vac = false
+var tds_scans = false
 export(String, FILE, "*.tscn") var next_scene
 
 # Figuras sobre as estatisticas
@@ -47,21 +49,20 @@ func _ready():
 	for i in range(len(Globals.lvl2_collected_vaccines)):
 		if Globals.lvl2_collected_vaccines[i] == 1:
 			collected_vac += 1
-	$"estatistica/Vacinas Coletadas".text = str(collected_vac) + " / " + str(total_vac)
-
-	var scans_made = 2
-	var total_scans = 34
 	
-	var tds_vac = false
-	var tds_scans = false
 	# pegou todas as vacinas
-	if collected_vac == total_vac:
+	if collected_vac >= total_vac:
+		collected_vac = total_vac
 		tds_vac = true
 		
 #	realizou todas as verificacoes
-	if scans_made == total_scans:
+	if Globals.total_scans >= Globals.scans_avaiables:
+		Globals.total_scans = Globals.scans_avaiables
 		tds_scans = true
-	
+		
+	$"estatistica/Vacinas Coletadas".text = str(collected_vac) + " / " + str(total_vac)
+	$"estatistica/Verificacoes Realizadas".text = str(Globals.total_scans) + " / " + str(Globals.scans_avaiables)
+
 	if tds_scans && tds_vac:
 		$estatistica/Fundo.texture = fig1
 		$figura/Fundo.texture = fig5
@@ -79,8 +80,6 @@ func _ready():
 		$figura/Fundo.texture = fig8
 		$msg/texto.text = msg_finais[3]
 
-
-
 func _on_Timer_timeout():
 	counter += 1
 	
@@ -88,6 +87,8 @@ func _on_Timer_timeout():
 		$estatistica.visible = false
 		$msg.visible = true
 	elif counter == 2:
+		if tds_scans && tds_vac:
+			return
 		$msg/texto.text = msg_retorno
 	elif counter == 3:
 		$msg/texto.text = msg_bonus

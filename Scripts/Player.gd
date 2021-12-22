@@ -49,6 +49,7 @@ func _physics_process(delta):
 func anim_setup():
 	var counter = 0
 	if current_level == 1:
+		$botao.visible = false
 		anim = $Kid
 
 	elif current_level == 2:
