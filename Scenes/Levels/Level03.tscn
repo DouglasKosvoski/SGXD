@@ -28,7 +28,7 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1090, 132 )
+position = Vector2( 80, 88 )
 lvl_qtd_vacinas = 5
 current_level = 3
 
@@ -41,31 +41,34 @@ editor_draw_limits = true
 position = Vector2( 0, -7.62939e-06 )
 
 [node name="Vacina" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 312, 152 )
+position = Vector2( 400, 152 )
 scale = Vector2( 1, 1 )
 vacine_name = "0"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 528, 128 )
+position = Vector2( 648, 176 )
 scale = Vector2( 1, 1 )
 vacine_name = "1"
 
 [node name="Vacina3" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 816, 128 )
+position = Vector2( 688, 64 )
 scale = Vector2( 1, 1 )
 vacine_name = "2"
 
 [node name="Vacina4" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 1000, 120 )
+position = Vector2( 936, 72 )
 scale = Vector2( 1, 1 )
 vacine_name = "3"
 
 [node name="Vacina5" parent="Vaccines" instance=ExtResource( 5 )]
-position = Vector2( 1328, 176 )
+position = Vector2( 1264, 176 )
 scale = Vector2( 1, 1 )
 vacine_name = "4"
 
 [node name="Boundaries" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 4 )]
 position = Vector2( 144, 60 )
@@ -199,6 +202,10 @@ dest_y = 160
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1608, 112 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -12, 32 )

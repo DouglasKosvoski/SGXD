@@ -30,7 +30,7 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 816, 104 )
+position = Vector2( 64, 96 )
 lvl_qtd_vacinas = 7
 current_level = 2
 
@@ -43,37 +43,37 @@ editor_draw_limits = true
 position = Vector2( 177, 74 )
 
 [node name="Vacina" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 31, 70 )
+position = Vector2( 15, 78 )
 scale = Vector2( 1, 1 )
 vacine_name = "0"
 
 [node name="Vacina2" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 151, 46 )
+position = Vector2( 183, 54 )
 scale = Vector2( 1, 1 )
 vacine_name = "1"
 
 [node name="Vacina3" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 375, 78 )
+position = Vector2( 543, -2 )
 scale = Vector2( 1, 1 )
 vacine_name = "2"
 
 [node name="Vacina4" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 647, 62 )
+position = Vector2( 719, -10 )
 scale = Vector2( 1, 1 )
 vacine_name = "3"
 
 [node name="Vacina5" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 799, 94 )
+position = Vector2( 847, 94 )
 scale = Vector2( 1, 1 )
 vacine_name = "4"
 
 [node name="Vacina6" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 1079, 70 )
+position = Vector2( 1047, 30 )
 scale = Vector2( 1, 1 )
 vacine_name = "5"
 
 [node name="Vacina7" parent="Vaccines" instance=ExtResource( 7 )]
-position = Vector2( 1303, 70 )
+position = Vector2( 1311, 78 )
 scale = Vector2( 1, 1 )
 vacine_name = "6"
 
@@ -88,12 +88,31 @@ position = Vector2( 1656, 128 )
 scale = Vector2( 0.5, 3 )
 
 [node name="Bottom3" parent="Boundaries" instance=ExtResource( 6 )]
-position = Vector2( 384, 64 )
-scale = Vector2( 18, 1 )
+position = Vector2( 304, 64 )
+scale = Vector2( 13, 1 )
 
 [node name="Bottom5" parent="Boundaries" instance=ExtResource( 6 )]
 position = Vector2( 864, 32 )
 scale = Vector2( 4, 1 )
+
+[node name="Bottom6" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 704, 32 )
+scale = Vector2( 4, 1 )
+
+[node name="Bottom7" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 792, 40 )
+rotation = 1.57079
+scale = Vector2( 2, 1 )
+
+[node name="Bottom9" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 640, 40 )
+rotation = 1.57079
+scale = Vector2( 2, 1 )
+
+[node name="Bottom8" parent="Boundaries" instance=ExtResource( 6 )]
+position = Vector2( 768, 40 )
+rotation = 0.785397
+scale = Vector2( 2, 1 )
 
 [node name="Bottom4" parent="Boundaries" instance=ExtResource( 6 )]
 position = Vector2( 1360, 64 )
