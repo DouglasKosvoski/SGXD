@@ -28,7 +28,7 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 96, 88 )
+position = Vector2( 1090, 132 )
 lvl_qtd_vacinas = 5
 current_level = 3
 
@@ -68,8 +68,24 @@ vacine_name = "4"
 [node name="Boundaries" type="Node2D" parent="."]
 
 [node name="Top" parent="Boundaries" instance=ExtResource( 4 )]
-position = Vector2( 840, 72 )
-scale = Vector2( 35, 0.5 )
+position = Vector2( 144, 60 )
+scale = Vector2( 6, 1 )
+
+[node name="Top2" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 336, 40 )
+scale = Vector2( 6, 1 )
+
+[node name="Top3" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 488, 64 )
+scale = Vector2( 4.5, 1 )
+
+[node name="Top4" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 944, 24 )
+scale = Vector2( 15, 1 )
+
+[node name="Top5" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1472, 64 )
+scale = Vector2( 7, 1 )
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 4 )]
 position = Vector2( 840, 208 )
@@ -82,6 +98,67 @@ scale = Vector2( 0.5, 3 )
 [node name="Right" parent="Boundaries" instance=ExtResource( 4 )]
 position = Vector2( 1656, 136 )
 scale = Vector2( 0.5, 3 )
+
+[node name="StaticBody2D" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1504, 96 )
+
+[node name="StaticBody2D2" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1480, 208 )
+rotation = 0.785397
+
+[node name="StaticBody2D7" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1480, 208 )
+rotation = 0.785397
+
+[node name="StaticBody2D9" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 433, 212 )
+rotation = 0.785397
+
+[node name="StaticBody2D12" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 577, 198 )
+rotation = 0.785397
+
+[node name="StaticBody2D13" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 356, 197 )
+rotation = 0.785397
+
+[node name="StaticBody2D14" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 203, 217 )
+rotation = 0.785397
+
+[node name="StaticBody2D15" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 75, 203 )
+rotation = 0.785397
+
+[node name="StaticBody2D8" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1428, 205 )
+rotation = 0.785397
+scale = Vector2( 1.3, 1.3 )
+
+[node name="StaticBody2D4" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1096, 200 )
+rotation = 1.57079
+scale = Vector2( 1, 3 )
+
+[node name="StaticBody2D10" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 847, 201 )
+rotation = 1.57079
+scale = Vector2( 1, 3 )
+
+[node name="StaticBody2D11" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 754, 167 )
+rotation = 1.57079
+scale = Vector2( 1, 2 )
+
+[node name="StaticBody2D5" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 968, 168 )
+rotation = 1.57079
+scale = Vector2( 1, 3 )
+
+[node name="StaticBody2D6" parent="Boundaries" instance=ExtResource( 4 )]
+position = Vector2( 1184, 168 )
+rotation = 1.57079
+scale = Vector2( 1, 2 )
 
 [node name="Timer" parent="." instance=ExtResource( 7 )]
 segundos = 60
@@ -124,7 +201,7 @@ dest_y = 160
 position = Vector2( 1608, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -20, 32 )
+position = Vector2( -12, 32 )
 shape = SubResource( 1 )
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

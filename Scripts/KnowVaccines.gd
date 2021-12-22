@@ -1,5 +1,7 @@
 extends Control
 
+export(String, FILE, "*.tscn") var previous_scene
+
 const vac_names = [
 	"BCG (Bacilo Calmette-Guerin)",
 	"Hepatite B",
@@ -135,3 +137,7 @@ func _on_dTpa_pressed():
 func _on_Influenza_pressed():
 	$"Text Container/VBoxContainer/Name".text = vac_names[17]
 	$"Text Container/VBoxContainer/Finalidade".text = vac_fin[17] + ".\n" + vac_apl[17] + "."
+
+
+func _on_Back_Button_pressed():
+	get_tree().change_scene(previous_scene)
