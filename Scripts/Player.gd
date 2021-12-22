@@ -164,7 +164,7 @@ func throw():
 func spawnShoot():
 	var flagPrev = Vector2()
 	var flag = shootItem.instance()
-	var size = flag.get_node("KinematicBody2D/Sprite").texture.get_size()
+	var size = flag.get_node("Lupa/Sprite").texture.get_size()
 	flag.set_position(Vector2(position.x+(size.x*2), position.y))
 	get_tree().get_root().add_child(flag)
 	

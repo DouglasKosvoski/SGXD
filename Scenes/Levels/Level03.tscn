@@ -28,7 +28,7 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 80, 88 )
+position = Vector2( 400, 112 )
 lvl_qtd_vacinas = 5
 current_level = 3
 

@@ -109,6 +109,9 @@ scale = Vector2( 1, 1 )
 vacine_name = "12"
 
 [node name="Boundaries" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Bottom" parent="Boundaries" instance=ExtResource( 3 )]
 position = Vector2( 824, 211 )

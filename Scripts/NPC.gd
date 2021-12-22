@@ -3,9 +3,9 @@ extends Node2D
 export(int) var dest_x
 export(int) var dest_y
 export(bool) var flipped
-export(bool) var robot = false
+export(bool) var robot
 
-const SPEED = 25
+var SPEED = 25
 var motion = Vector2()
 var original_position
 var original_destination
@@ -44,10 +44,17 @@ func _on_NPC_Area2D_body_entered(body):
 	if body.name == "Player":
 		body.hurt()
 	else:
-		print("Npc detectou: ", body)
+		print("Npc detectou bb: ", body)
 
-func asd():
-	print("asd")
+func scan():
+	if robot:
+		$AnimatedSprite.visible = false
+		$AnimatedSprite_Robot.visible = true
+		$AnimatedSprite_Robot.play("die")
+		$AnimatedSprite_Robot.flip_h = $AnimatedSprite.flip_h
+		SPEED = 0
+	else:
+		$Verified.visible = true
 
-#Se for robot
-#no scan transforma em robo
+func _on_NPC_area_area_entered(area):
+	print("Npc detectou aa: ", area, area.name)

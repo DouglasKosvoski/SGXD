@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/map/map2.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=2]
@@ -8,9 +8,6 @@
 [ext_resource path="res://Scenes/Boundaries.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Vaccine.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/NPC_denier_stick.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/NPC_denier_m.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/NPC_denier_banner.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/NPC_denier.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Level02.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -187,37 +184,10 @@ return_to = "Level"
 [node name="Npcs" type="Node2D" parent="."]
 
 [node name="NPC" parent="Npcs" instance=ExtResource( 8 )]
-position = Vector2( 104, 144 )
-dest_x = 248
-dest_y = 144
+position = Vector2( 128, 128 )
+dest_x = 250
+dest_y = 128
 flipped = true
-
-[node name="NPC2" parent="Npcs" instance=ExtResource( 9 )]
-position = Vector2( 240, 152 )
-dest_x = 80
-dest_y = 152
-
-[node name="NPC3" parent="Npcs" instance=ExtResource( 10 )]
-position = Vector2( 208, 120 )
-dest_x = 72
-dest_y = 120
-
-[node name="NPC4" parent="Npcs" instance=ExtResource( 11 )]
-position = Vector2( 168, 176 )
-dest_x = 304
-dest_y = 176
-flipped = true
-
-[node name="NPC5" parent="Npcs" instance=ExtResource( 11 )]
-position = Vector2( 432, 96 )
-dest_x = 512
-dest_y = 176
-flipped = true
-
-[node name="NPC6" parent="Npcs" instance=ExtResource( 11 )]
-position = Vector2( 736, 176 )
-dest_x = 656
-dest_y = 96
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1608, 112 )

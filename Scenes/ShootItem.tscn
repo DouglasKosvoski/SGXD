@@ -7,18 +7,18 @@
 
 [node name="ShootItem" type="Node2D"]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Lupa" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="LupaCollision" type="CollisionShape2D" parent="Lupa"]
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="KinematicBody2D"]
+[node name="LupaArea" type="Area2D" parent="Lupa"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D"]
+[node name="LupaAreaCollision" type="CollisionShape2D" parent="Lupa/LupaArea"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="Sprite" type="Sprite" parent="Lupa"]
 texture = ExtResource( 1 )
 
-[connection signal="body_entered" from="KinematicBody2D/Area2D" to="KinematicBody2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Lupa/LupaArea" to="Lupa" method="_on_Area2D_body_entered"]

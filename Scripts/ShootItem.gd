@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 50
+const SPEED = 80
 var motion = Vector2()
 
 func _physics_process(delta):
@@ -12,5 +12,8 @@ func _physics_process(delta):
 	pass
 
 func _on_Area2D_body_entered(body):
-	print(body.name)
-	pass
+	if body.name == "KinematicBody2D":
+		pass
+	else:
+		print("Throw detectou: ",body.name)
+#	queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/Personagens/robot/robot_die/003.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Personagens/robot/robot_idle/003.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sprites/Personagens/robot/robot_idle/001.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Personagens/robot/robot_die/000.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Personagens/robot/robot_idle/002.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/ui/verified.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,17 +27,43 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.56819, 13.0158 )
 
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
 [node name="NPC" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "die"
+animation = "walk"
 frame = 3
+playing = true
 
 [node name="NPC_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_area"]
 shape = SubResource( 2 )
+
+[node name="AnimatedSprite_Robot" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 3 )
+animation = "walk"
+playing = true
+
+[node name="Verified" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
 
 [connection signal="body_entered" from="NPC_area" to="." method="_on_NPC_Area2D_body_entered"]
