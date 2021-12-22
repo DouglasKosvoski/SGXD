@@ -47,16 +47,30 @@ func _physics_process(delta):
 
 # get the correct set of animations, dependant on level index
 func anim_setup():
+	var counter = 0
 	if current_level == 1:
-		var counter = 0
-		for i in range(Globals.lvl1_collected_vaccines):
+		anim = $Kid
+
+	elif current_level == 2:
+		for i in range(len(Globals.lvl1_collected_vaccines)):
 			if Globals.lvl1_collected_vaccines[i] == 1:
 				counter += 1
-		anim = $Kid
-	elif current_level == 2:
-		anim = $Teen
+
+		if counter < Globals.lvl1_qtd_vaccines:
+			anim = $Teen_Sick
+		else:
+			anim = $Teen
+		
 	elif current_level == 3:
-		anim = $Adult
+		for i in range(len(Globals.lvl2_collected_vaccines)):
+			if Globals.lvl2_collected_vaccines[i] == 1:
+				counter += 1
+
+		if counter < Globals.lvl2_qtd_vaccines:
+			anim = $Adult_Sick
+		else:
+			anim = $Adult
+			
 	anim.visible = true
 
 # control which animation is currently playing and in what order or direction

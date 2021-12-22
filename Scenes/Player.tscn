@@ -84,14 +84,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -102,14 +102,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 47 ) ],
 "loop": true,
-"name": "run",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "hurt",
+"name": "thrrow",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 34 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 28 ) ],
@@ -117,9 +112,14 @@ animations = [ {
 "name": "magnifier",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 47 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "thrrow",
+"name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -130,9 +130,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 54 ), ExtResource( 56 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 57 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 66 ), ExtResource( 60 ), ExtResource( 58 ) ],
 "loop": true,
-"name": "run",
+"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -145,9 +145,9 @@ animations = [ {
 "name": "throw",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 66 ), ExtResource( 60 ), ExtResource( 58 ) ],
+"frames": [ ExtResource( 54 ), ExtResource( 56 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 57 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "magnifier",
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -158,9 +158,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 25 ), ExtResource( 29 ) ],
 "loop": true,
-"name": "run",
+"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -173,9 +173,9 @@ animations = [ {
 "name": "throw",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 25 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "magnifier",
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -186,9 +186,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 65 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 67 ) ],
+"frames": [ ExtResource( 70 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 38 ) ],
 "loop": true,
-"name": "run",
+"name": "magnifier",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ) ],
@@ -201,9 +201,9 @@ animations = [ {
 "name": "throw",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 70 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 65 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 67 ) ],
 "loop": true,
-"name": "magnifier",
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -218,21 +218,21 @@ shape = SubResource( 5 )
 visible = false
 frames = SubResource( 2 )
 animation = "run"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Teen" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 6 )
 animation = "run"
-frame = 4
+frame = 2
 playing = true
 
 [node name="Teen_Sick" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 3 )
 animation = "run"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Adult" type="AnimatedSprite" parent="."]
