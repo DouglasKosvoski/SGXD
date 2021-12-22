@@ -34,9 +34,6 @@ func _ready():
 	MAX_SPEED = MAX_SPEED + (MAX_SPEED * (GAIN * current_level))
 	ACCELERATION = MAX_SPEED / 10
 	
-#	if current_level == 1:
-#		$CanvasLayer/Throw.visible = false
-	
 	if AudioManager.sound_on:
 		$AudioStreamPlayer.volume_db = AudioManager.sound_volume
 	else:
@@ -51,6 +48,10 @@ func _physics_process(delta):
 # get the correct set of animations, dependant on level index
 func anim_setup():
 	if current_level == 1:
+		var counter = 0
+		for i in range(Globals.lvl1_collected_vaccines):
+			if Globals.lvl1_collected_vaccines[i] == 1:
+				counter += 1
 		anim = $Kid
 	elif current_level == 2:
 		anim = $Teen
