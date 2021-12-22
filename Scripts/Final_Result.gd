@@ -17,7 +17,7 @@ var fig8 = load("res://Figures/figura 24.png")
 
 # Mensagens a serem exibidas
 const msg_retorno = "Volte para o jogo, colete todas as vacinas e realize a checagem de toda a desinformação.\n\nSó assim poderá garantir o título de Super Gotinha!"
-const msg_bonus = "Aproveite e pegue sua carteira de vacinação e vá até uma Unidade de Saúde para verificar se suas vacinas estão em dia! Vacinas são seguras, eficazes e salvam vidas.\n\nImunize-se!"
+const msg_bonus = "Aproveite e pegue sua carteira de vacinação e vá até uma Unidade de Saúde para verificar se suas vacinas estão em dia!\nVacinas são seguras, eficazes e salvam vidas.\n\nImunize-se!"
 const msg_finais = [
 	"Parabéns, Super Gotinha!\n\nVocê adquiriu a imunização contra várias doenças e contra a desinformação.",
 	"O Gotinha adquiriu imunidade!\n\nMas deixou a desejar ao deixar de realizar todas as checagens, logo, você é um alvo fácil para práticas de desinformação.",
