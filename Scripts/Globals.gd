@@ -26,7 +26,7 @@ var total_score = 0
 var current_level = 0
 var player_name = "Você"
 
-const form_link = "www.google.com"
+const form_link = "https://forms.gle/pnfmTdEkAv2ZZthv6"
 
 func _ready():
 	time_session_started = OS.get_time()
