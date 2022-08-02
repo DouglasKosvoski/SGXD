@@ -57,5 +57,5 @@ func scan():
 	elif !robot:
 		$Verified.visible = true
 #
-#func _on_NPC_area_area_entered(area):
-#	print("Npc detectou aa: ", area, area.name)
+func _on_NPC_area_area_entered(area):
+	print("Npc detectou aa: ", area, area.name)

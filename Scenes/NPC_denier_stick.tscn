@@ -27,14 +27,14 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "die",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "die",
 "speed": 5.0
 } ]
 
@@ -57,9 +57,9 @@ animation = "walk"
 frame = 3
 playing = true
 
-[node name="NPC" type="Area2D" parent="."]
+[node name="NPC_area" type="Area2D" parent="."]
 
-[node name="npc stick coll" type="CollisionShape2D" parent="NPC"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_area"]
 shape = SubResource( 2 )
 
 [node name="Verified" type="Sprite" parent="."]
@@ -68,5 +68,5 @@ position = Vector2( 0, -16 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 16 )
 
-[connection signal="area_entered" from="NPC" to="NPC" method="_on_NPC_area_area_entered"]
-[connection signal="body_entered" from="NPC" to="NPC" method="_on_NPC_Area2D_body_entered"]
+[connection signal="area_entered" from="NPC_area" to="NPC_area" method="_on_NPC_area_area_entered"]
+[connection signal="body_entered" from="NPC_area" to="NPC_area" method="_on_NPC_Area2D_body_entered"]

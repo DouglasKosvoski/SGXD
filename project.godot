@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="SGXD"
+config/name="Super Gotinha"
 run/main_scene="res://Scenes/GameOpening.tscn"
 config/icon="res://Sprites/icon.png"
 
@@ -27,6 +27,7 @@ Globals="*res://Scripts/Globals.gd"
 
 window/size/width=240
 window/size/height=135
+window/size/fullscreen=true
 window/size/test_width=720
 window/size/test_height=405
 window/stretch/mode="2d"
